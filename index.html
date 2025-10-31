@@ -102,6 +102,19 @@
      .circle-img {
   border-radius: 50%;
   object-fit: cover;
+  animation: glow 1s infinite alternate;
+}
+
+    @keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 161, 204, 0.5); /* light glow */
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(0, 161, 204, 1); /* brighter glow */
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 161, 204, 0.5); /* back to light glow */
+  }
 }
       
 
@@ -242,6 +255,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
