@@ -26,7 +26,15 @@
     .navbar {
       background-color: rgba(0, 0, 0, 0.85);
       backdrop-filter: blur(8px);
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+
     }
+
+    .navbar .circle-img {
+  width: 50px;  /* smaller logo */
+  height: 50px;
+}
 
     section {
       padding: 0px;
@@ -255,19 +263,21 @@
   font-size: 0.9rem; /* smaller text */
   padding: 10px;     /* reduce inner spacing */
 }
-/* CSS */
-/* CSS */
 .floating-footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
-  padding: 15px 35px;
-  border-radius: 40px;
+  padding: 1rem 2vw;           /* padding scales with viewport width */
+  border-radius: 35px;
   z-index: 1000;
   box-shadow: 0 6px 25px rgba(0,0,0,0.5);
   backdrop-filter: blur(6px);
+  max-width: 95vw;              /* never exceed screen width */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .floating-footer ul {
@@ -275,26 +285,31 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 35px;
+  gap: 2vw;                     /* gap scales with screen width */
+  flex-wrap: nowrap;             /* prevent wrapping */
+  justify-content: center;
+  flex-shrink: 1;                /* allows shrinking on small screens */
 }
 
 .floating-footer a {
   position: relative;
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1.5vw, 1rem); /* scales between min and max */
   text-decoration: none;
   overflow: hidden;
+  white-space: nowrap;           /* prevent text from breaking */
+  flex-shrink: 1;                /* allows links to shrink */
 }
 
-/* Animated dots along the link */
+/* Animated dots */
 .floating-footer a::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -10px;
-  width: 6px;
-  height: 6px;
+  left: -6px;
+  width: 4px;
+  height: 4px;
   background: #00c8ff;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -306,34 +321,16 @@
 }
 
 @keyframes moveDot {
-  0% { left: -10px; opacity: 0; }
+  0% { left: -6px; opacity: 0; }
   30% { opacity: 1; }
   50% { left: 100%; opacity: 1; }
   70% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
-  @media (max-width: 768px) {
-  .floating-footer {
-    padding: 10px 20px;
-    bottom: 15px;
-  }
-
-  @media (max-width: 480px) {
-  .pricing-box {
-    padding: 10px;
-    font-size: 1rem;
-  }
-
-  #dotsCanvas {
-  filter: drop-shadow(0 0 6px #00c8ff);
-}
-
-.container.pricing-cards {
-  margin-top: 25px; /* space between box and cards */
-}
 
 
-    }
+
+    
 
 
 
@@ -343,12 +340,13 @@
 
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark position-relative" style="height:150px; overflow:hidden;">
+<nav class="navbar navbar-expand-lg navbar-dark position-relative" style="height:80px; overflow:hidden">
+
   <!-- Canvas for animated dots -->
   <canvas id="dotsCanvas" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
 
   <div class="container position-relative" style="z-index:1; margin-top:2px;">
-    <img src="image1.png" alt="Teoodor Logo" width="13%" height="13%" class="d-inline-block align-text-top circle-img">
+    <img src="image1.png" alt="Teoodor Logo" class="d-inline-block align-text-top circle-img" style="width:60px; height:60px">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -574,6 +572,5 @@ window.addEventListener('resize', () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
 
