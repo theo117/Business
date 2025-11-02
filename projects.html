@@ -140,15 +140,19 @@ section {
 /* CSS */
 .floating-footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
-  padding: 15px 35px;
-  border-radius: 40px;
+  padding: 1rem 2vw;           /* padding scales with viewport width */
+  border-radius: 35px;
   z-index: 1000;
   box-shadow: 0 6px 25px rgba(0,0,0,0.5);
   backdrop-filter: blur(6px);
+  max-width: 95vw;              /* never exceed screen width */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .floating-footer ul {
@@ -156,26 +160,31 @@ section {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 35px;
+  gap: 2vw;                     /* gap scales with screen width */
+  flex-wrap: nowrap;             /* prevent wrapping */
+  justify-content: center;
+  flex-shrink: 1;                /* allows shrinking on small screens */
 }
 
 .floating-footer a {
   position: relative;
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1.5vw, 1rem); /* scales between min and max */
   text-decoration: none;
   overflow: hidden;
+  white-space: nowrap;           /* prevent text from breaking */
+  flex-shrink: 1;                /* allows links to shrink */
 }
 
-/* Animated dots along the link */
+/* Animated dots */
 .floating-footer a::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -10px;
-  width: 6px;
-  height: 6px;
+  left: -6px;
+  width: 4px;
+  height: 4px;
   background: #00c8ff;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -187,19 +196,15 @@ section {
 }
 
 @keyframes moveDot {
-  0% { left: -10px; opacity: 0; }
+  0% { left: -6px; opacity: 0; }
   30% { opacity: 1; }
   50% { left: 100%; opacity: 1; }
   70% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
 
-  .floating-footer ul {
-    gap: 15px;
-  }
-  .floating-footer a {
-    font-size: 0.85rem;
-  }
+
+
 
 
 
