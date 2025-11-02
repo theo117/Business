@@ -100,6 +100,13 @@
   opacity: 1;
   visibility: visible;
 }
+.whatsapp-btn-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000; /* higher than floating footer */
+  font-size: 40px;
+}
 
 .circle-img {
   border-radius: 50%;
@@ -237,7 +244,14 @@
   .floating-footer a {
     font-size: 0.85rem;
   }
+  .whatsapp-btn-container {
+    font-size: 50px;
+  }
+  .whatsapp-text {
+    font-size: 0.8rem;
+  }
 }
+
 
 
 
@@ -263,7 +277,7 @@
 
 <!-- Hero Section -->
 <section class="hero" id="home">
-  <h1>Building Modern, Scalable, High-Performing Websites</h1>
+  <h1 style="margin-top: -250px">Building Modern, Scalable, High-Performing Websites</h1>
   <p>I help businesses and individuals create professional, responsive, and results-driven websites that make an impact.</p>
   <a href="#contact" class="btn btn-custom mt-3">Let's Build Your Website</a>
 </section>
@@ -354,7 +368,7 @@
 </section>
 </form>
 
- <div class="whatsapp-btn-container;" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-size: 40px">
+ <div class="whatsapp-btn-container" style="position: fixed; bottom: 50px; right: 15px; z-index: 2000; font-size: 40px">
                                 <a href="https://wa.me/27603832046" target="_blank" class="whatsapp-btn">
                                     <i class="fab fa-whatsapp" style="color: green"></i>
                                     <span class="whatsapp-text"; style="color: white">Chat With Us</span>
