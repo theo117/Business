@@ -60,10 +60,13 @@ section {
   animation: glow 1s infinite alternate;
 }
 
-.img-fluid {
+.img-fluid{
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 161, 204, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex ;
+
+
 }
 
 @keyframes glow {
@@ -78,22 +81,53 @@ section {
   }
 }
 
-.pricing-box {
-  display: block;
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  
+}
+
+/* 3D Box Heading */
+.box {
+  width: 180px;
+  height: 80px;
   background: linear-gradient(180deg, #1c1c1c, #0a0a0a);
-  margin: 10px auto;
   color: #fff;
   font-family: 'Georgia', serif;
   font-size: 2rem;
   text-align: center;
   letter-spacing: 1px;
-  padding: 20px 80px;
   border-radius: 15px;
   box-shadow:
-    inset 2px 2px 6px rgba(255, 255, 255, 0.08),
-    inset -2px -2px 6px rgba(0, 0, 0, 0.8),
-    0 6px 14px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
+    inset 2px 2px 6px rgba(255,255,255,0.08),
+    inset -2px -2px 6px rgba(0,0,0,0.8),
+    0 6px 14px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateX(-30deg);
+  padding: auto;
+}
+
+/* Top face of the 3D box */
+.box::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: -2px;
+  width: 184px;
+  height: 40px;
+  background: linear-gradient(145deg, #333, #555);
+  transform: rotateX(60deg);
+  transform-origin: bottom;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  
 }
 
 </style>
@@ -126,32 +160,44 @@ section {
 
 
 <section id="projects" class="container">
-  <h2 class="section-title pricing-box">Projects</h2><br><br>
-  <div class="row g-4 ">
-    <div class="col-md-6 col-lg-4 ">
-      
-        <img src="pro1.png" class="img-fluid" alt="Project 1">
-      </a><br>
-      <button style="margin-top: 10px; margin-left: 130px; " class="btn btn-primary" onclick="window.location.href='https://teoodor.theodorenelson.co.za'">Live demo</button>
+  <!-- 3D heading -->
+  <div class="box-container">
+    <div class="box">Projects</div>
+  </div><br>
 
+
+ <div class="row g-4 justify-content-center">
+  <!-- Project 1 -->
+  <div class="col-md-4 col-sm-6 text-center">
+    <div class="card shadow-sm" style="width: 300px; margin: 0 auto; border: none; background: transparent;">
+      <img src="pro1.png" class="img-fluid rounded" alt="Project 1" style="border-radius: 10px;">
+      <button class="btn btn-primary mt-3 w-100" onclick="window.location.href='https://test.theodorenelson.co.za'">
+        Live Demo
+      </button>
     </div>
-
-    <div class="col-md-6 col-lg-4">
-     
-        <img src="pro2.png" class="img-fluid" alt="Project 2">
-      </a><br>
-      <button style="margin-top: 10px; margin-left: 130px; " class="btn btn-primary" onclick="window.location.href='https://camira.theodorenelson.co.za'">Live demo</button>
-    </div>
-
-     <div class="col-md-6 col-lg-4">
-      
-        <img src="pro3.png" class="img-fluid" alt="Project 3">
-      </a><br>
-      <button style="margin-top: 10px; margin-left: 130px; " class="btn btn-primary" onclick="window.location.href='https://cv.theodorenelson.co.za'">Live demo</button>
-    </div>
-
-    <!-- Add more projects in similar <div class="col-md-6 col-lg-4"> blocks -->
   </div>
+
+  <!-- Project 2 -->
+  <div class="col-md-4 col-sm-6 text-center">
+    <div class="card shadow-sm" style="width: 300px; margin: 0 auto; border: none; background: transparent;">
+      <img src="pro2.png" class="img-fluid rounded" alt="Project 2" style="border-radius: 10px;">
+      <button class="btn btn-primary mt-3 w-100" onclick="window.location.href='https://camira.theodorenelson.co.za'">
+        Live Demo
+      </button>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="col-md-4 col-sm-6 text-center">
+    <div class="card shadow-sm" style="width: 300px; margin: 0 auto; border: none; background: transparent;">
+      <img src="pro3.png" class="img-fluid rounded" alt="Project 3" style="border-radius: 10px;">
+      <button class="btn btn-primary mt-3 w-100" onclick="window.location.href='https://cv.theodorenelson.co.za'">
+        Live Demo
+      </button>
+    </div>
+  </div>
+</div>
+
 </section>
 
 
@@ -170,5 +216,4 @@ section {
     </body>
   
   
-
     </html>
