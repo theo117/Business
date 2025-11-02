@@ -245,6 +245,65 @@
   height: 250px;
   perspective: 1000px;
 }
+/* CSS */
+/* CSS */
+.floating-footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 35px;
+  border-radius: 40px;
+  z-index: 1000;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+.floating-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 35px;
+}
+
+.floating-footer a {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Animated dots along the link */
+.floating-footer a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 6px;
+  height: 6px;
+  background: #ff9800;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: moveDot 2s linear infinite;
+}
+
+.floating-footer a:hover::before {
+  background: #fff;
+}
+
+@keyframes moveDot {
+  0% { left: -10px; opacity: 0; }
+  30% { opacity: 1; }
+  50% { left: 100%; opacity: 1; }
+  70% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+
 
   </style>
 </head>
@@ -258,15 +317,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="price.html">Pricing</a></li>
-      </ul>
-    </div>
+   
   </div>
 </nav> 
 
@@ -396,9 +447,23 @@ function animate() {
 animate();
 </script>
 
+<!-- HTML -->
+<footer class="floating-footer">
+  <nav>
+    <ul>
+      <li><a href="index.html" class="animated-link">About</a></li>
+      <li><a href="index.html" class="animated-link">Services</a></li>
+      <li><a href="index.html" class="animated-link">Contact</a></li>
+      <li><a href="projects.html" class="animated-link">Projects</a></li>
+      <li><a href="price.html" class="animated-link">Pricing</a></li>
+    </ul>
+  </nav>
+</footer>
+
+            
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
