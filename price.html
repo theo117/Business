@@ -177,6 +177,11 @@
   transform: scale(1.03);
   transition: transform 0.3s ease-in-out;
 }
+
+.flip-card-back p {
+  margin: 0;
+  line-height: 1.2; /* optional */
+}
   .marquee-container {
     overflow: hidden;
     white-space: nowrap;
@@ -196,7 +201,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px; /* ⬅️ Increase this for more space from the top */
+  margin-top: 50px; /* ⬅️ Increase this for more space from the top */
   gap: 20px;
 }
 
@@ -241,9 +246,14 @@
 /* Responsive flip cards */
 .flip-card {
   width: 100%;
-  max-width: 300px;
-  height: 250px;
+  max-width: 250px; /* smaller width */
+  height: 200px;
   perspective: 1000px;
+}
+
+.flip-card-front, .flip-card-back {
+  font-size: 0.9rem; /* smaller text */
+  padding: 10px;     /* reduce inner spacing */
 }
 /* CSS */
 /* CSS */
@@ -308,6 +318,17 @@
     bottom: 15px;
   }
 
+  #dotsCanvas {
+  filter: drop-shadow(0 0 6px #00c8ff);
+}
+
+.container.pricing-cards {
+  margin-top: 25px; /* space between box and cards */
+}
+
+
+    }
+
 
 
   </style>
@@ -316,24 +337,27 @@
 
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container" style=" margin-top: 2px">
+<nav class="navbar navbar-expand-lg navbar-dark position-relative" style="height:150px; overflow:hidden;">
+  <!-- Canvas for animated dots -->
+  <canvas id="dotsCanvas" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
+
+  <div class="container position-relative" style="z-index:1; margin-top:2px;">
     <img src="image1.png" alt="Teoodor Logo" width="13%" height="13%" class="d-inline-block align-text-top circle-img">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-   
   </div>
-</nav> 
+</nav>
 
- <section id="projects" class="pricing-section">
+
+ <section id="projects" class="pricing-section" style="padding-bottom: 50px;">
   <!-- 3D Centered Heading -->
   <div class="box-container">
     <h2 class="box">Pricing</h2>
   </div>
 
   <!-- Flip cards row -->
-  <div class="container mt-5">
+  <div class="container pricing-cards">
     <div class="row justify-content-center g-4">
 
       <!-- Starter Plan -->
@@ -465,6 +489,78 @@ animate();
   </nav>
 </footer>
 
+<script>
+const sentence = "We do websites so you don't have to. ";
+const marquee = document.getElementById("marquee");
+
+// Repeat sentence multiple times for seamless effect
+marquee.textContent = sentence.repeat(20);
+
+let x = 0;
+
+function animateMarquee() {
+  x -= 1.5; // scroll speed
+  if (x < -marquee.offsetWidth / 2) x = 0;
+
+  const y = Math.sin(Date.now() * 0.002) * 20;
+  marquee.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  requestAnimationFrame(animateMarquee);
+}
+
+animateMarquee(); // ✅ renamed
+</script>
+
+<!-- Dots Animation (Header) -->
+<script>
+const canvas = document.getElementById('dotsCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = 100;
+
+const dots = [];
+const numDots = 50;
+
+for (let i = 0; i < numDots; i++) {
+  dots.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.5,
+    dy: (Math.random() - 0.5) * 0.5
+  });
+}
+
+function animateDots() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  dots.forEach(dot => {
+    ctx.beginPath();
+    ctx.arc(dot.x, dot.y, dot.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+
+    dot.x += dot.dx;
+    dot.y += dot.dy;
+
+    if (dot.x > canvas.width) dot.x = 0;
+    if (dot.x < 0) dot.x = canvas.width;
+    if (dot.y > canvas.height) dot.y = 0;
+    if (dot.y < 0) dot.y = canvas.height;
+  });
+
+  requestAnimationFrame(animateDots);
+}
+
+animateDots(); // ✅ renamed
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = 100;
+});
+</script>
+
+
             
 
 
@@ -472,6 +568,5 @@ animate();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
 
