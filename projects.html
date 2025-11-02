@@ -26,7 +26,14 @@
   .navbar {
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
   }
+
+  .navbar .circle-img {
+  width: 50px;  /* smaller logo */
+  height: 50px;
+}
 
   section {
     padding: 80px 0;
@@ -187,17 +194,13 @@ section {
   100% { left: 100%; opacity: 0; }
 }
 
-    @media (max-width: 768px) {
-  .floating-footer {
-    padding: 10px 20px;
-    bottom: 15px;
+  .floating-footer ul {
+    gap: 15px;
+  }
+  .floating-footer a {
+    font-size: 0.85rem;
   }
 
-  @media (max-width: 480px) {
-  .pricing-box {
-    padding: 10px;
-    font-size: 1rem;
-  }
 
 
 </style>
@@ -341,4 +344,3 @@ window.addEventListener('resize', () => {
   
   
     </html>
-
