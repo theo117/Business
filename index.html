@@ -30,6 +30,7 @@
     .navbar {
       background-color: rgba(0, 0, 0, 0.85);
       backdrop-filter: blur(8px);
+      
     }
     .hero {
       min-height: 100vh;
@@ -112,6 +113,7 @@
   border-radius: 50%;
   object-fit: cover;
   animation: glow 1s infinite alternate;
+ 
 }
 
 @keyframes glow {
@@ -133,6 +135,7 @@
 
 .navbar .container {
   z-index: 1; /* content above canvas */
+  margin: 1.5em;
 }
   
 /* CSS */
@@ -266,7 +269,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top position-relative">
   <canvas id="dotsCanvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
   <div class="container position-relative">
-    <img src="image1.png" alt="Teoodor Logo" class="d-inline-block align-text-top circle-img">
+    <img src="image1.png" alt="Teoodor Logo" class="d-inline-block align-text-top circle-img" style="width: 10%; height: 10%">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
