@@ -186,17 +186,59 @@
   70% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
-@media (max-width: 768px) {
-  .floating-footer {
-    padding: 10px 20px;
-    bottom: 15px;
+
+.navbar img.circle-img {
+  width: 60px;  /* smaller on mobile */
+  height: 60px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) { /* tablet */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) { /* phone */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+    max-width: 95%;
+  }
+  .btn-custom {
+    padding: 8px 20px;
+    font-size: 0.9rem;
   }
 
-  @media (max-width: 480px) {
-  .pricing-box {
-    padding: 10px;
-    font-size: 1rem;
+  #contact .col-lg-6 {
+  width: 100%;
+  padding: 0 15px;
+}
+
+  .floating-footer {
+    padding: 10px 20px;
   }
+  .floating-footer ul {
+    gap: 15px;
+  }
+  .floating-footer a {
+    font-size: 0.85rem;
+  }
+}
+
 
 
 
@@ -396,5 +438,3 @@ window.addEventListener('resize', () => {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
