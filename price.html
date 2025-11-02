@@ -456,29 +456,6 @@
   <div id="marquee" class="marquee-content"></div>
 </div>
 
-<script>
-const sentence = "We do websites so you don't have to. ";
-const marquee = document.getElementById("marquee");
-
-// Repeat sentence multiple times for seamless effect
-marquee.textContent = sentence.repeat(20);
-
-let x = 0;
-
-function animate() {
-  x -= 1.5; // scroll speed
-  // reset when the first repetition scrolls out
-  if (x < -marquee.offsetWidth / 2) x = 0;
-
-  // wavy vertical movement applied to entire line
-  const y = Math.sin(Date.now() * 0.002) * 20;
-
-  marquee.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  requestAnimationFrame(animate);
-}
-
-animate();
-</script>
 
 <!-- HTML -->
 <footer class="floating-footer">
@@ -572,5 +549,6 @@ window.addEventListener('resize', () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
