@@ -470,26 +470,7 @@
   </nav>
 </footer>
 
-<script>
-const sentence = "We do websites so you don't have to. ";
-const marquee = document.getElementById("marquee");
 
-// Repeat sentence multiple times for seamless effect
-marquee.textContent = sentence.repeat(20);
-
-let x = 0;
-
-function animateMarquee() {
-  x -= 1.5; // scroll speed
-  if (x < -marquee.offsetWidth / 2) x = 0;
-
-  const y = Math.sin(Date.now() * 0.002) * 20;
-  marquee.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  requestAnimationFrame(animateMarquee);
-}
-
-animateMarquee(); // ✅ renamed
-</script>
 
 <!-- Dots Animation (Header) -->
 <script>
@@ -549,6 +530,7 @@ window.addEventListener('resize', () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
