@@ -235,16 +235,22 @@
   padding: 0 15px;
 }
 
-  .floating-footer {
-   padding: 10px 20px;
-   position: fixed;
-  left: 0;
+    .floating-footer {
+  padding: 10px 20px;
+  position: fixed;
+  left: 50%;
   bottom: 0;
-  width: 100%;
-  z-index: 1000;;
- 
+  transform: translateX(-50%); /* centers the footer */
+  z-index: 1000;
 
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto; /* instead of 100% */
+  background: black; /* optional */
+  border-radius: 10px; /* optional */
+}
 
   .floating-footer.show {
   bottom: 0; /* slide up and show */
@@ -261,6 +267,14 @@
   .whatsapp-text {
     font-size: 0.8rem;
   }
+}
+
+    .floating-footer nav ul {
+  display: flex;
+  gap: 20px;    /* optional spacing */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -443,7 +457,7 @@ window.addEventListener('resize', () => {
 
 <!-- HTML -->
 <!-- HTML -->
-<footer id="floating-footer" class="floating-footer" style="margin-bottom: 60px; display: none">
+<footer id="floating-footer" class="floating-footer" style="margin-bottom: 60px; display: none; display: flex; justify-content: center; align-items: center">
   <nav>
     <ul>
       <li><a href="#about" class="animated-link">About</a></li>
@@ -480,6 +494,7 @@ window.addEventListener('resize', () => {
 
 </body>
 </html>
+
 
 
 
