@@ -760,4 +760,14 @@ section {
   50% { left: 100%; opacity: 1; }
   70% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
+
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* Extra space above the contact section if needed */
+#contact {
+  margin-top: 150px; /* increase this number if you want it further down */
 }
