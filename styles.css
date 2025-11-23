@@ -181,15 +181,7 @@
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) { /* tablet */
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-}
+
 
 @media (max-width: 480px) { /* phone */
   .hero h1 {
@@ -835,6 +827,7 @@ section {
     right: 12px;
   }
 }
+
 
 
 
