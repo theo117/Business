@@ -828,6 +828,63 @@ section {
   }
 }
 
+/* === FIX LAYOUT / CONTACT SECTION – ADD THIS AT THE END === */
+
+/* Don't make <html> a flex container */
+html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Keep flex only on body */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let .container behave like normal (Bootstrap-style) */
+.container {
+  flex: 0 0 auto;
+}
+
+/* Contact section spacing and responsiveness */
+#contact {
+  padding: 80px 0 160px;   /* extra bottom padding so form is not under floating footer/WhatsApp */
+  margin-top: 80px;        /* not too huge */
+}
+
+/* Keep the form nicely centered */
+#contact .row {
+  margin: 0;
+}
+
+#contact .col-lg-6 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Make form fields full width */
+#contact input,
+#contact textarea,
+#contact select,
+#contact button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Small phones (like yours) */
+@media (max-width: 480px) {
+  #contact {
+    padding-top: 40px;
+    padding-bottom: 190px; /* a bit more clearance at bottom for floating footer + WhatsApp button */
+    margin-top: 40px;
+  }
+}
+
+
+
 
 
 
