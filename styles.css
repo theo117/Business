@@ -43,7 +43,7 @@
     }
     section {
       padding: 80px 0;
-      margin-bottom: 530px;
+      margin-bottom: 50px;
     }
     h2.section-title {
       text-align: center;
@@ -839,5 +839,6 @@ section {
     right: 12px;
   }
 }
+
 
 
