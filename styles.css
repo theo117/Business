@@ -771,3 +771,73 @@ section {
 #contact {
   margin-top: 150px; /* increase this number if you want it further down */
 }
+
+.whatsapp-btn-container {
+  position: fixed;
+  bottom: 90px;
+  right: 16px;
+  z-index: 2000;
+}
+
+/* Button styling */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #25D366;              /* WhatsApp green */
+  border-radius: 999px;              /* pill shape */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Icon */
+.whatsapp-btn i {
+  font-size: 24px;
+}
+
+/* Hover / focus state */
+.whatsapp-btn:hover,
+.whatsapp-btn:focus-visible {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+}
+
+/* Optional: subtle pulsing animation */
+.whatsapp-btn-container {
+  animation: float-in 0.4s ease-out 0.3s both;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .whatsapp-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .whatsapp-btn i {
+    font-size: 20px;
+  }
+
+  .whatsapp-btn-container {
+    bottom: 130px;
+    right: 12px;
+  }
+}
+
