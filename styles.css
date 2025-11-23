@@ -301,7 +301,7 @@ html, body {
     .section-title {
       color: #00c8ff;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 100px;
     }
 
     /* Pricing card styles */
@@ -610,11 +610,7 @@ html, body {
   .container {
   flex: 1; /* pushes footer to bottom if content is short */
 }
-  .section-title {
-  color: #00c8ff;
-  text-align: center;
-  
-}
+
 
 section {
   padding: 180px 0 80px; /* top padding accounts for navbar height */
@@ -839,6 +835,7 @@ section {
     right: 12px;
   }
 }
+
 
 
 
