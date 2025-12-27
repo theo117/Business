@@ -116,33 +116,73 @@
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  padding: 15px 35px;
-  border-radius: 40px;
+  transform: translateX(-50%) translateY(20px);
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.floating-footer.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.floating-footer .ff-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 18px;
+  border-radius: 40px;
   box-shadow: 0 6px 25px rgba(0,0,0,0.5);
   backdrop-filter: blur(6px);
 }
 
-.floating-footer ul {
+.floating-footer .ff-inner ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 35px;
+  gap: 12px;
+  align-items: center;
 }
 
-.floating-footer a {
-  position: relative;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-pill {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #eaeaea;
   text-decoration: none;
-  overflow: hidden;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: transparent;
+  transition: background 160ms ease, color 160ms ease;
 }
 
-/* Animated dots along the link */
+.footer-pill:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.footer-cta {
+  margin-left: 8px;
+  background: #ffffff;
+  color: #070707;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* keep earlier animated dot accessible for a11y without interfering with pills */
 .floating-footer a::before {
   content: '';
   position: absolute;
@@ -154,6 +194,7 @@
   border-radius: 50%;
   transform: translateY(-50%);
   animation: moveDot 2s linear infinite;
+  opacity: 0.9;
 }
 
 .floating-footer a:hover::before {
@@ -166,6 +207,26 @@
   50% { left: 100%; opacity: 1; }
   70% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .floating-footer {
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%) translateY(6px);
+    width: calc(100% - 24px);
+  }
+  .floating-footer .ff-inner {
+    padding: 8px 10px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .footer-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-pill { font-size: 0.82rem; padding: 6px 10px }
+  .footer-cta { padding: 6px 10px; font-size: 0.9rem }
 }
 
 .navbar img.circle-img {
