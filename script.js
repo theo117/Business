@@ -47,17 +47,27 @@ window.addEventListener('resize', () => {
   canvas.height = 100;
 });
 
-const footer = document.getElementById('floating-footer');
+// Floating footer show/hide for all pages (adds/removes .show class)
+const floatingFooters = document.querySelectorAll('.floating-footer');
+function toggleFloatingFooter() {
+  // If the page is too short to scroll, show the footer so it's discoverable (e.g., price.html)
+  const canScroll = document.documentElement.scrollHeight > window.innerHeight + 20;
+  if (!canScroll) {
+    floatingFooters.forEach(f => f.classList.add('show'));
+    return;
+  }
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 100) {
-      // User has scrolled down — show footer
-      footer.style.display = 'block';
-    } else {
-      // User is at/near top — hide footer
-      footer.style.display = 'none';
-    }
-  });
+  if (window.scrollY > 120) {
+    floatingFooters.forEach(f => f.classList.add('show'));
+  } else {
+    floatingFooters.forEach(f => f.classList.remove('show'));
+  }
+}
+window.addEventListener('scroll', toggleFloatingFooter);
+window.addEventListener('resize', toggleFloatingFooter);
+document.addEventListener('DOMContentLoaded', toggleFloatingFooter);
+
+/* End floating footer toggle */
 
   document.querySelectorAll('.flip-card').forEach(card => {
     const inner = card.querySelector('.flip-card-inner');
@@ -117,26 +127,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-// Floating footer show/hide for all pages (adds/removes .show class)
-const floatingFooters = document.querySelectorAll('.floating-footer');
-function toggleFloatingFooter() {
-  // If the page is too short to scroll, show the footer so it's discoverable (e.g., price.html)
-  const canScroll = document.documentElement.scrollHeight > window.innerHeight + 20;
-  if (!canScroll) {
-    floatingFooters.forEach(f => f.classList.add('show'));
-    return;
-  }
-
-  if (window.scrollY > 120) {
-    floatingFooters.forEach(f => f.classList.add('show'));
-  } else {
-    floatingFooters.forEach(f => f.classList.remove('show'));
-  }
-}
-window.addEventListener('scroll', toggleFloatingFooter);
-window.addEventListener('resize', toggleFloatingFooter);
-document.addEventListener('DOMContentLoaded', toggleFloatingFooter);
-
-/* End floating footer toggle */
-
