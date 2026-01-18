@@ -36,3 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+window.addEventListener("pageshow", event => {
+  const loader = document.getElementById("loader");
+  if (!loader) return;
+
+  // If page is loaded from back-forward cache
+  if (event.persisted) {
+    loader.style.display = "none";
+    loader.style.opacity = "0";
+  }
+});
+
+
