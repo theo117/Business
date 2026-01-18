@@ -1,21 +1,24 @@
-console.log("Loader JS loaded");
-
-window.addEventListener("load", () => {
+function hideLoader() {
   const loader = document.getElementById("loader");
-
-  if (!loader) {
-    console.error("Loader element not found");
-    return;
-  }
+  if (!loader) return;
 
   loader.style.opacity = "0";
-
   setTimeout(() => {
     loader.style.display = "none";
-  }, 300);
+  }, 400);
+}
+
+// Normal page load
+window.addEventListener("load", hideLoader);
+
+// Back / forward navigation (bfcache)
+window.addEventListener("pageshow", e => {
+  if (e.persisted) {
+    hideLoader();
+  }
 });
 
-// Page transition loader
+// Page transitions
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   if (!loader) return;
@@ -36,15 +39,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-window.addEventListener("pageshow", event => {
-  const loader = document.getElementById("loader");
-  if (!loader) return;
-
-  // If page is loaded from back-forward cache
-  if (event.persisted) {
-    loader.style.display = "none";
-    loader.style.opacity = "0";
-  }
-});
-
-
