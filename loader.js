@@ -39,3 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+setTimeout(() => {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+    loader.style.opacity = "0";
+  }
+}, 3000);
+
+
