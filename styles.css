@@ -1,0 +1,285 @@
+/* ===============================
+   BASE / RESET
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa; /* Microsoft light gray */
+  color: #323130;            /* Microsoft text color */
+}
+
+/* ===============================
+   BRAND COLORS
+================================ */
+:root {
+  --brand-blue: #0078d4;     /* Microsoft blue */
+  --brand-blue-hover: #005a9e;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar .container {
+  position: relative;
+  z-index: 1;
+}
+
+.circle-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Canvas dots stay behind */
+#dotsCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+section {
+  padding: 96px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--brand-blue);
+  margin-bottom: 48px;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #5f6368;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-custom {
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 26px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--brand-blue-hover);
+}
+
+/* ===============================
+   ABOUT
+================================ */
+.about-section {
+  background-color: #ffffff;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #323130;
+}
+
+.text-brand {
+  color: var(--brand-blue);
+}
+
+/* ===============================
+   SERVICES (Microsoft-style cards)
+================================ */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 28px;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.service-card h4 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   CONTACT
+================================ */
+#contact {
+  background-color: #f8f9fa;
+}
+
+#contact .form-control {
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* ===============================
+   FLOATING FOOTER (CALM VERSION)
+================================ */
+.floating-footer {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.floating-footer .ff-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.95
+}
+
+.floating-cta {
+  position: fixed;
+  top: 96px;          /* below navbar */
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-cta a {
+  background: #0078d4;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+.floating-cta a:hover {
+  background: #005a9e;
+}
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+
+.nav-link.active {
+  color: #0078d4;
+  font-weight: 600;
+}
+#loader {
+  pointer-events: none;
+}
+
+/* ===============================
+   PROJECT CARDS (Microsoft style)
+================================ */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.project-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card-body {
+  padding: 16px;
+}
+
+.project-card-body h5 {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #323130;
+}
+
+.project-card-body p {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: #5f6368;
+}
+
+.project-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0078d4;
+}
+.page-content {
+  padding-top: 120px;
+}
+.project-card {
+  cursor: pointer;
+}
+
+.project-link {
+  pointer-events: none; /* visual only */
+}
+#loader {
+  display: none !important;
+  pointer-events: none !important;
+}
+.project-card {
+  pointer-events: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
