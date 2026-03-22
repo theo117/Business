@@ -337,6 +337,18 @@ section {
   color: var(--text);
 }
 
+.contact-points a,
+.footer-links a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-points a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 #contact .form-control {
   border-radius: 12px;
   border: 1px solid var(--line);
@@ -574,6 +586,13 @@ section {
 
 .footer p {
   margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
 }
 
 #loader,
