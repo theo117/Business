@@ -84,16 +84,63 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!modalEl) return;
 
   const modal = new bootstrap.Modal(modalEl);
+  const allowedDemoHosts = new Set([
+    'wp3.theodorenelson.co.za',
+    'wp4.theodorenelson.co.za',
+    'wp5.theodorenelson.co.za',
+    'wp6.theodorenelson.co.za',
+    'wp7.theodorenelson.co.za'
+  ]);
+
+  function getSafeDemoUrl(rawUrl) {
+    if (!rawUrl) return null;
+
+    try {
+      const parsedUrl = new URL(rawUrl, window.location.origin);
+      if (parsedUrl.protocol !== 'https:' || !allowedDemoHosts.has(parsedUrl.hostname)) {
+        return null;
+      }
+
+      return parsedUrl.toString();
+    } catch {
+      return null;
+    }
+  }
+
+  function getSafeImagePath(rawPath) {
+    if (!rawPath) return '';
+    return /^[a-z0-9_-]+\.(png|jpg|jpeg|webp|gif|svg)$/i.test(rawPath) ? rawPath : '';
+  }
+
+  function openProjectModal(card) {
+    const title = card.dataset.title || '';
+    const modalImg = document.getElementById('projectModalImg');
+    const modalDemoBtn = document.getElementById('projectModalDemoBtn');
+    const safeDemoUrl = getSafeDemoUrl(card.dataset.demo);
+    const safeImagePath = getSafeImagePath(card.dataset.img);
+
+    document.getElementById('projectModalLabel').textContent = title;
+    modalImg.src = safeImagePath;
+    modalImg.alt = title ? `${title} preview` : 'Project preview';
+    document.getElementById('projectModalDesc').textContent = card.dataset.desc || '';
+    document.getElementById('projectModalTech').textContent = card.dataset.tech || '';
+    modalDemoBtn.href = safeDemoUrl || '#';
+    modalDemoBtn.setAttribute('aria-disabled', safeDemoUrl ? 'false' : 'true');
+    modalDemoBtn.classList.toggle('disabled', !safeDemoUrl);
+
+    modal.show();
+  }
 
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
-      document.getElementById('projectModalLabel').textContent = card.dataset.title || '';
-      document.getElementById('projectModalImg').src = card.dataset.img || '';
-      document.getElementById('projectModalDesc').textContent = card.dataset.desc || '';
-      document.getElementById('projectModalTech').textContent = card.dataset.tech || '';
-      document.getElementById('projectModalDemoBtn').href = card.dataset.demo || '#';
+      openProjectModal(card);
+    });
 
-      modal.show();
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openProjectModal(card);
+      }
     });
   });
 });

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>About Teodor Web Solutions | Business Website Studio</title>
   <meta name="description" content="Learn about Teodor Web Solutions, a South African business website studio focused on credible design, WordPress development, and clear lead-focused websites." />
   <meta name="robots" content="index, follow" />
@@ -27,15 +29,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a href="index.html" class="navbar-brand">
-      <img src="image1.png" alt="Teodor Logo" class="circle-img">
+      <img src="image1.png" alt="Teodor Logo" class="circle-img" decoding="async">
       <span>Teodor Web Solutions</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -64,7 +67,7 @@
   </div>
 </nav>
 
-<main class="page-content">
+<main id="main-content" class="page-content">
   <section class="about-hero">
     <div class="container">
       <div class="about-hero-copy">

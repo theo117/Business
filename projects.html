@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Teodor Web Solutions Projects | Web Design Portfolio</title>
   <meta name="description" content="View selected projects from Teodor Web Solutions, including business websites, WordPress builds, and custom website work designed to improve trust and presentation.">
   <meta name="robots" content="index, follow">
@@ -27,15 +29,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a href="index.html" class="navbar-brand">
-      <img src="image1.png" alt="Teodor Logo" class="circle-img">
+      <img src="image1.png" alt="Teodor Logo" class="circle-img" decoding="async">
       <span>Teodor Web Solutions</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -64,7 +67,7 @@
   </div>
 </nav>
 
-<main class="page-content">
+<main id="main-content" class="page-content">
   <section id="projects">
     <div class="container">
       <h1 class="section-title">Teodor Web Solutions Projects</h1>
@@ -75,17 +78,17 @@
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Elderly Care Website"
                data-img="pro1.png"
                data-demo="https://wp5.theodorenelson.co.za"
                data-tech="WordPress"
                data-desc="A modern landing page for elderly care services with a clean layout and responsive design.">
-            <img src="pro1.png" alt="Elderly Care Website preview" class="project-thumb">
+            <img src="pro1.png" alt="Elderly Care Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Elderly Care Website</h5>
               <p>Professional WordPress site for a care-focused business</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
@@ -93,81 +96,81 @@
         
 
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Repair Business Website"
                data-img="pro5.png"
                data-demo="https://wp5.theodorenelson.co.za"
                data-tech="WordPress"
                data-desc="A service-based WordPress website focused on lead generation and clarity.">
-            <img src="pro5.png" alt="Repair Business Website preview" class="project-thumb">
+            <img src="pro5.png" alt="Repair Business Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Repair Business Website</h5>
               <p>Lead-focused service business website</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Online Shop Website"
                data-img="pro6.png"
                data-demo="https://wp3.theodorenelson.co.za"
                data-tech="WordPress"
                data-desc="An eCommerce-style WordPress site with reusable layouts and product-focused design.">
-            <img src="pro6.png" alt="Online Shop Website preview" class="project-thumb">
+            <img src="pro6.png" alt="Online Shop Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Online Shop Website</h5>
               <p>Product-led online store presentation</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Ferrari Fan Page Website"
                data-img="pro9.png"
                data-demo="https://wp6.theodorenelson.co.za"
                data-tech="HTML | CSS | JavaScript"
                data-desc="A custom-built website for Ferrari fans with interactive elements and a modern design.">
-            <img src="pro9.png" alt="Ferrari Fan Page Website preview" class="project-thumb">
+            <img src="pro9.png" alt="Ferrari Fan Page Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Ferrari Fan Page Website</h5>
               <p>Custom build with a bold branded experience</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Wedding Website"
                data-img="pro10.png"
                data-demo="https://wp7.theodorenelson.co.za"
                data-tech="WordPress"
                data-desc="A wedding website with a polished presentation, responsive layout, and event-focused content.">
-            <img src="pro10.png" alt="Wedding Website preview" class="project-thumb">
+            <img src="pro10.png" alt="Wedding Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Wedding Website</h5>
               <p>Elegant event website with premium presentation</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="project-card project-btn"
+          <div class="project-card project-btn" role="button" tabindex="0"
                data-title="Online Business Website"
                data-img="pro8.png"
                data-demo="https://wp4.theodorenelson.co.za"
                data-tech="WordPress"
                data-desc="A WordPress project showcasing adaptable layouts and reusable components.">
-            <img src="pro8.png" alt="Online Business Website preview" class="project-thumb">
+            <img src="pro8.png" alt="Online Business Website preview" class="project-thumb" loading="lazy" decoding="async">
             <div class="project-card-body">
               <h5>Online Business Website</h5>
               <p>Clean layout system for a modern online business</p>
-              <button class="project-link">View details -&gt;</button>
+              <button type="button" class="project-link" tabindex="-1" aria-hidden="true">View details -&gt;</button>
             </div>
           </div>
         </div>
@@ -181,7 +184,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="projectModalLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <img id="projectModalImg" src="" class="img-fluid rounded mb-3" alt="">
@@ -189,8 +192,8 @@
         <p><strong>Tech stack:</strong> <span id="projectModalTech"></span></p>
       </div>
       <div class="modal-footer">
-        <a id="projectModalDemoBtn" href="#" target="_blank" class="btn btn-custom">Open Live Demo</a>
-        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="projectModalDemoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-custom">Open Live Demo</a>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

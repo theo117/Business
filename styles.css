@@ -20,6 +20,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 2000;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--brand-deep);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
 body {
   margin: 0;
   color: var(--text);
@@ -86,6 +102,15 @@ section {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--brand);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.project-card:focus-visible {
+  outline: 3px solid rgba(17, 160, 216, 0.45);
+  outline-offset: 3px;
 }
 
 .circle-img {
@@ -358,6 +383,14 @@ section {
 #contact .form-control:focus {
   border-color: #7dbff2;
   box-shadow: 0 0 0 0.25rem rgba(11, 111, 191, 0.15);
+}
+
+.visually-hidden-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .whatsapp-btn-container {

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Teodor Web Solutions | Business Websites That Build Trust</title>
   <meta name="description" content="Teodor Web Solutions designs and builds polished business websites for companies that need a credible online presence in South Africa. Web design, WordPress development, and lead-focused business websites.">
   <meta name="robots" content="index, follow">
@@ -108,15 +110,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a href="index.html" class="navbar-brand">
-      <img src="image1.png" alt="Teodor Logo" class="circle-img">
+      <img src="image1.png" alt="Teodor Logo" class="circle-img" decoding="async">
       <span>Teodor Web Solutions</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -145,6 +148,7 @@
   </div>
 </nav>
 
+<main id="main-content">
 <section class="hero" id="home">
   <div class="container">
     <div class="eyebrow reveal-up">Business-first web design studio</div>
@@ -323,24 +327,28 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8">
           <input type="hidden" name="access_key" value="76df574b-73b0-4609-b993-13a22433ed9e">
           <input type="hidden" name="subject" value="New Website Enquiry">
           <input type="hidden" name="from_name" value="Teodor Web Solutions">
-
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-control" required>
+          <div class="visually-hidden-field" aria-hidden="true">
+            <label for="company-field">Company</label>
+            <input id="company-field" type="text" name="botcheck" tabindex="-1" autocomplete="off">
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-control" required>
+            <label class="form-label" for="full-name">Full Name</label>
+            <input id="full-name" type="text" name="name" class="form-control" autocomplete="name" maxlength="80" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Project Brief</label>
-            <textarea name="message" class="form-control" rows="5" required></textarea>
+            <label class="form-label" for="email-address">Email Address</label>
+            <input id="email-address" type="email" name="email" class="form-control" autocomplete="email" inputmode="email" maxlength="120" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="project-brief">Project Brief</label>
+            <textarea id="project-brief" name="message" class="form-control" rows="5" maxlength="2000" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-custom w-100">Send Enquiry</button>
@@ -349,6 +357,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <div class="whatsapp-btn-container">
   <a href="https://wa.me/27606360886" target="_blank" class="whatsapp-btn" rel="noopener noreferrer">
