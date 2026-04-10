@@ -90,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'wp4.theodorenelson.co.za',
     'wp5.theodorenelson.co.za',
     'wp6.theodorenelson.co.za',
-    'wp7.theodorenelson.co.za',
-    'wp9.theodorenelson.co.za'
+    'wp9.theodorenelson.o.za'
   ]);
 
   function getSafeDemoUrl(rawUrl) {
