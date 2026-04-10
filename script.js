@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modal = new bootstrap.Modal(modalEl);
   const allowedDemoHosts = new Set([
+    'covenant-blessed-site.lovable.app',
     'wp3.theodorenelson.co.za',
     'wp4.theodorenelson.co.za',
     'wp5.theodorenelson.co.za',
