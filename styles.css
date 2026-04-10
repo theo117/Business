@@ -525,12 +525,15 @@ textarea:focus-visible,
 }
 
 .project-link {
-  border: 0;
-  background: transparent;
+  display: inline-flex;
   color: var(--brand);
   font-weight: 800;
   font-size: 0.9rem;
-  pointer-events: none;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
 
 .modal-content {

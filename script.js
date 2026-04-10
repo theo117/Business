@@ -90,7 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'wp4.theodorenelson.co.za',
     'wp5.theodorenelson.co.za',
     'wp6.theodorenelson.co.za',
-    'wp7.theodorenelson.co.za'
+    'wp7.theodorenelson.co.za',
+    'wp9.theodorenelson.co.za'
   ]);
 
   function getSafeDemoUrl(rawUrl) {
@@ -142,6 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         openProjectModal(card);
       }
+    });
+  });
+
+  document.querySelectorAll('.project-link').forEach(link => {
+    link.addEventListener('click', event => {
+      event.stopPropagation();
     });
   });
 });
