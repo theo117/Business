@@ -151,3 +151,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/* ===============================
+   PRICING FORM ROUTING
+================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('pricing-contact-form');
+  const projectModel = document.getElementById('project-model');
+  const subjectField = document.getElementById('form-subject');
+  const routeField = document.getElementById('enquiry-route');
+  const followupField = document.getElementById('followup-document');
+  const qualificationField = document.getElementById('qualification-form');
+  const projectModelNote = document.getElementById('project-model-note');
+
+  if (!form || !projectModel || !subjectField || !routeField || !followupField || !qualificationField || !projectModelNote) {
+    return;
+  }
+
+  function getMonthlyGuideUrl() {
+    return new URL('monthly-plan-guide.html', window.location.href).toString();
+  }
+
+  function getQualificationFormUrl() {
+    return 'https://docs.google.com/forms/d/e/1FAIpQLSeLJJBFGW5cLMWCRofuarrPMCMuj5Tm8bD7e64GitC-KL9NLw/viewform?usp=dialog';
+  }
+
+  function updateProjectRouting() {
+    const value = projectModel.value;
+
+    if (value === 'monthly-plan') {
+      subjectField.value = 'New Monthly Plan Enquiry';
+      routeField.value = 'monthly-plan';
+      followupField.value = getMonthlyGuideUrl();
+      qualificationField.value = getQualificationFormUrl();
+      projectModelNote.textContent = 'Monthly-plan enquiries can be routed to an automatic follow-up email with your guide and qualification form.';
+      return;
+    }
+
+    if (value === 'once-off-build') {
+      subjectField.value = 'New Once-Off Website Enquiry';
+      routeField.value = 'once-off-build';
+      followupField.value = '';
+      qualificationField.value = '';
+      projectModelNote.textContent = 'Once-off build enquiries stay on the standard project-quote path.';
+      return;
+    }
+
+    subjectField.value = 'New Website Enquiry';
+    routeField.value = 'general';
+    followupField.value = '';
+    qualificationField.value = '';
+    projectModelNote.textContent = 'Choose the option that fits best. Monthly-plan enquiries can be routed to a dedicated follow-up guide automatically.';
+  }
+
+  projectModel.addEventListener('change', updateProjectRouting);
+  updateProjectRouting();
+});
