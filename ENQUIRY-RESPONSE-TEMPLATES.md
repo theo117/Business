@@ -6,7 +6,7 @@ These templates are designed for the current free Web3Forms workflow so replies 
 
 **Subject**
 
-`Monthly Website Plan Follow-Up | Teodor Web Solutions`
+`Monthly Website Plan Follow-Up | Teodor Dev`
 
 **Email**
 
@@ -16,7 +16,7 @@ Hi [Name],
 Thank you for your enquiry.
 
 Based on your selection, here is the Monthly Website Plan Overview:
-https://www.theodorenelson.co.za/monthly-plan-guide.html
+https://www.teodordev.co.za/monthly-plan-guide.html
 
 To help us understand the project properly, please complete the qualification form here:
 https://docs.google.com/forms/d/e/1FAIpQLSeLJJBFGW5cLMWCRofuarrPMCMuj5Tm8bD7e64GitC-KL9NLw/viewform?usp=dialog
@@ -24,14 +24,14 @@ https://docs.google.com/forms/d/e/1FAIpQLSeLJJBFGW5cLMWCRofuarrPMCMuj5Tm8bD7e64G
 Once we have reviewed your enquiry and qualification details, we can recommend the most suitable structure for your project and prepare the right next step.
 
 Kind regards,
-Teodor Web Solutions
+Teodor Dev
 ```
 
 ## 2. Once-Off Build Enquiry
 
 **Subject**
 
-`Thank You For Your Enquiry | Teodor Web Solutions`
+`Thank You For Your Enquiry | Teodor Dev`
 
 **Email**
 
@@ -45,14 +45,14 @@ Your enquiry has been received and we will review your website goals, likely sco
 We will come back to you with the right next step as soon as possible.
 
 Kind regards,
-Teodor Web Solutions
+Teodor Dev
 ```
 
 ## 3. Not Sure Yet
 
 **Subject**
 
-`Thank You For Your Enquiry | Teodor Web Solutions`
+`Thank You For Your Enquiry | Teodor Dev`
 
 **Email**
 
@@ -66,7 +66,7 @@ We have received your message and will review the project details so we can reco
 If needed, we may suggest either a once-off build or a monthly arrangement depending on the website goals, scope, and support requirements.
 
 Kind regards,
-Teodor Web Solutions
+Teodor Dev
 ```
 
 ## 4. Short Internal Checklist Before Replying
@@ -88,3 +88,5 @@ You can save these labels in your own notes or email drafts:
 - `Not sure response`
 
 That way your manual free-plan workflow stays fast and consistent.
+
+

@@ -27,7 +27,7 @@ Monthly-plan submissions will send:
 
 - `project_model = monthly-plan`
 - `enquiry_route = monthly-plan`
-- `followup_document = https://www.theodorenelson.co.za/monthly-plan-guide.html`
+- `followup_document = https://www.teodordev.co.za/monthly-plan-guide.html`
 - `qualification_form = https://docs.google.com/forms/d/e/1FAIpQLSeLJJBFGW5cLMWCRofuarrPMCMuj5Tm8bD7e64GitC-KL9NLw/viewform?usp=dialog`
 
 ## Recommended Setup
@@ -56,7 +56,7 @@ Condition:
 Send email to the client using:
 
 - recipient: `email`
-- subject: `Your Monthly Website Plan Follow-Up | Teodor Web Solutions`
+- subject: `Your Monthly Website Plan Follow-Up | Teodor Dev`
 
 Suggested email body:
 
@@ -74,7 +74,7 @@ To help us prepare a more accurate recommendation, please complete the qualifica
 Once we have reviewed your enquiry and qualification details, we can recommend the most suitable structure for your project.
 
 Kind regards,
-Teodor Web Solutions
+Teodor Dev
 ```
 
 ### Optional internal notification
@@ -100,7 +100,7 @@ Send a normal acknowledgement email.
 
 Suggested subject:
 
-- `Thank you for your enquiry | Teodor Web Solutions`
+- `Thank you for your enquiry | Teodor Dev`
 
 Suggested email body:
 
@@ -112,7 +112,7 @@ Thank you for getting in touch.
 Your enquiry has been received and we will review your project requirements and come back to you with the right next step.
 
 Kind regards,
-Teodor Web Solutions
+Teodor Dev
 ```
 
 ## Suggested Zapier Logic
@@ -154,3 +154,5 @@ Before turning the automation live:
 5. Test one `monthly-plan` submission
 6. Test one `once-off-build` submission
 7. Confirm the correct email path is triggered in both cases
+
+

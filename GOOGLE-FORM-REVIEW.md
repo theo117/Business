@@ -135,7 +135,7 @@ Suggested rewrite:
 
 Options:
 
-- Teodor Web Solutions will handle updates
+- Teodor Dev will handle updates
 - I will handle updates internally
 - Not sure yet
 
@@ -226,3 +226,4 @@ Use the Google Form only after:
 2. the lead is sent to the qualification step from the thank-you page or your follow-up email
 
 That keeps the main website enquiry form short and easier to submit.
+

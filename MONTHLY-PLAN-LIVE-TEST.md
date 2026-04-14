@@ -34,7 +34,7 @@ Suggested test values:
 
 Go to:
 
-- `https://www.theodorenelson.co.za/price.html`
+- `https://www.teodordev.co.za/price.html`
 
 Then:
 
@@ -46,7 +46,7 @@ Then:
 
 - the form should submit successfully
 - you should land on:
-  - `https://www.theodorenelson.co.za/thank-you.html`
+  - `https://www.teodordev.co.za/thank-you.html`
 
 ## Step 2. Check The Thank-You Page
 
@@ -132,3 +132,4 @@ Typical fixes:
 ## Final Goal
 
 At the end of this test, you should know whether the current free-plan workflow is practical enough to use day to day until you later move to automation.
+

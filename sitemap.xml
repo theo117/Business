@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.theodorenelson.co.za/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://www.teodordev.co.za/</loc>
+    <lastmod>2026-04-14</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.theodorenelson.co.za/projects.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://www.teodordev.co.za/projects.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.theodorenelson.co.za/about.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://www.teodordev.co.za/about.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.theodorenelson.co.za/price.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://www.teodordev.co.za/price.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
+
 

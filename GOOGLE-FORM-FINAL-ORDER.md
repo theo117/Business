@@ -13,7 +13,7 @@ It keeps the strong design-brief questions, but arranges them in a way that feel
 ```text
 Thank you for your enquiry.
 
-This brief helps Teodor Web Solutions understand your business, website goals, visual direction, and support needs before recommending the best next step.
+This brief helps Teodor Dev understand your business, website goals, visual direction, and support needs before recommending the best next step.
 
 Please answer as clearly as possible.
 ```
@@ -25,7 +25,7 @@ Please answer as clearly as possible.
 ```text
 Thank you for your enquiry.
 
-This client brief helps Teodor Web Solutions understand your business, website goals, visual direction, and support needs before recommending the most suitable next step.
+This client brief helps Teodor Dev understand your business, website goals, visual direction, and support needs before recommending the most suitable next step.
 
 Please answer as clearly as possible.
 ```
@@ -33,7 +33,7 @@ Please answer as clearly as possible.
 ### Option 2. More premium and consultative
 
 ```text
-Thank you for your interest in working with Teodor Web Solutions.
+Thank you for your interest in working with Teodor Dev.
 
 This brief is used to understand your business, your website goals, the kind of presentation you want to create, and the level of support your project may require.
 
@@ -45,7 +45,7 @@ The more clearly you answer, the easier it is to recommend the right structure a
 ```text
 Thank you for your enquiry.
 
-This brief helps Teodor Web Solutions understand your business, website goals, visual direction, and ongoing support needs before recommending whether a once-off build or a monthly website arrangement is the better fit.
+This brief helps Teodor Dev understand your business, website goals, visual direction, and ongoing support needs before recommending whether a once-off build or a monthly website arrangement is the better fit.
 
 Please answer as clearly as possible.
 ```
@@ -199,7 +199,7 @@ Options:
 
 Options:
 
-- Teodor Web Solutions will handle updates
+- Teodor Dev will handle updates
 - I will maintain it
 - Need advice / unsure
 
@@ -272,7 +272,7 @@ This order works well because it moves from:
 ```text
 Thank you. Your client brief has been submitted successfully.
 
-Teodor Web Solutions will review your enquiry and recommend the most suitable next step for your project.
+Teodor Dev will review your enquiry and recommend the most suitable next step for your project.
 ```
 
 ### Option 2. More premium
@@ -288,5 +288,6 @@ Your information has been received and will be reviewed carefully so the right d
 ```text
 Thank you. Your client brief has been submitted.
 
-Teodor Web Solutions will review your business goals, website needs, and support expectations before recommending the most suitable structure for your project.
+Teodor Dev will review your business goals, website needs, and support expectations before recommending the most suitable structure for your project.
 ```
+
