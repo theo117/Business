@@ -511,14 +511,14 @@ textarea:focus-visible,
   overflow: hidden;
 }
 
-.whatsapp-btn-container {
+.lets-talk-btn-container {
   position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 999;
 }
 
-.whatsapp-btn {
+.lets-talk-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -532,12 +532,12 @@ textarea:focus-visible,
   box-shadow: 0 12px 28px rgba(10, 47, 77, 0.28);
 }
 
-.whatsapp-btn i {
+.lets-talk-btn i {
   font-size: 1.1rem;
   flex-shrink: 0;
 }
 
-.whatsapp-btn span {
+.lets-talk-btn span {
   line-height: 1.2;
 }
 
@@ -1218,11 +1218,11 @@ textarea:focus-visible,
     gap: 0.35rem;
   }
 
-  .whatsapp-btn span {
+  .lets-talk-btn span {
     display: none;
   }
 
-  .whatsapp-btn {
+  .lets-talk-btn {
     border-radius: 50%;
     width: 52px;
     height: 52px;
