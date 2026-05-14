@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (value === 'once-off-build') {
-      subjectField.value = 'New Once-Off Website Enquiry';
+      subjectField.value = 'New Once-Off Digital Build Enquiry';
       routeField.value = 'once-off-build';
       followupField.value = '';
       qualificationField.value = '';
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    subjectField.value = 'New Website Enquiry';
+    subjectField.value = 'New Digital Build Enquiry';
     routeField.value = 'general';
     followupField.value = '';
     qualificationField.value = '';
