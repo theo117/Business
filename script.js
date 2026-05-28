@@ -211,9 +211,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ===============================
-   WEBSITE MAKER
+   SITE INTRO + WEBSITE MAKER
 ================================ */
 document.addEventListener('DOMContentLoaded', () => {
+  const intro = document.getElementById('maker-intro');
+  const introSeenKey = 'teodor-site-favicon-intro-seen-v1';
+
+  if (intro) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasSeenIntro = window.localStorage.getItem(introSeenKey) === 'true';
+
+    if (hasSeenIntro || reduceMotion) {
+      intro.remove();
+    } else {
+      window.localStorage.setItem(introSeenKey, 'true');
+      intro.classList.add('maker-intro-active');
+      window.setTimeout(() => {
+        intro.classList.add('maker-intro-hide');
+        window.setTimeout(() => intro.remove(), 650);
+      }, 3200);
+    }
+  }
+
   const form = document.getElementById('website-maker-form');
   const preview = document.getElementById('generated-site-preview');
   const promptInput = document.getElementById('maker-prompt');

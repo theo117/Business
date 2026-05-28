@@ -1202,6 +1202,101 @@ textarea:focus-visible,
   padding-top: 0;
 }
 
+.maker-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  gap: 1.2rem;
+  align-content: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(17, 160, 216, 0.18), transparent 28%),
+    rgba(238, 243, 246, 0.96);
+  backdrop-filter: blur(12px);
+  opacity: 1;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+.maker-intro-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.maker-intro-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  color: #fff;
+  background: #fff;
+  box-shadow: 0 26px 60px rgba(9, 26, 44, 0.24);
+  animation: makerIntroFloat 1.8s ease-in-out infinite;
+}
+
+.maker-intro-icon::before,
+.maker-intro-icon::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(12, 79, 130, 0.18);
+  animation: makerIntroPulse 1.8s ease-out infinite;
+}
+
+.maker-intro-icon::before {
+  inset: -14px;
+}
+
+.maker-intro-icon::after {
+  inset: -28px;
+  animation-delay: 0.35s;
+}
+
+.maker-intro-icon img {
+  position: relative;
+  z-index: 1;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: makerIntroSpin 2.2s ease-in-out infinite;
+}
+
+.maker-intro-active .maker-intro-icon {
+  animation: makerIntroFloat 1.8s ease-in-out infinite, makerIntroGlow 1.25s ease-in-out infinite;
+}
+
+.maker-intro-lines {
+  display: grid;
+  gap: 0.55rem;
+  justify-items: center;
+}
+
+.maker-intro-lines span {
+  display: block;
+  height: 0.62rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(12, 79, 130, 0.14), rgba(185, 145, 87, 0.28), rgba(12, 79, 130, 0.14));
+  background-size: 220% 100%;
+  animation: makerIntroLine 1.25s ease-in-out infinite;
+}
+
+.maker-intro-lines span:first-child {
+  width: 220px;
+}
+
+.maker-intro-lines span:nth-child(2) {
+  width: 168px;
+  animation-delay: 0.12s;
+}
+
+.maker-intro-lines span:nth-child(3) {
+  width: 118px;
+  animation-delay: 0.24s;
+}
+
 .maker-hero {
   position: relative;
   overflow: hidden;
@@ -1865,6 +1960,68 @@ textarea:focus-visible,
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes makerIntroFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.03);
+  }
+}
+
+@keyframes makerIntroPulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.88);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.16);
+  }
+}
+
+@keyframes makerIntroSpin {
+  0%,
+  100% {
+    transform: rotate(-8deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.08);
+  }
+}
+
+@keyframes makerIntroGlow {
+  0%,
+  100% {
+    box-shadow: 0 26px 60px rgba(9, 26, 44, 0.24), 0 0 0 0 rgba(17, 160, 216, 0.22);
+  }
+
+  50% {
+    box-shadow: 0 30px 70px rgba(9, 26, 44, 0.28), 0 0 0 16px rgba(17, 160, 216, 0.1);
+  }
+}
+
+@keyframes makerIntroLine {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.45;
+  }
+
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.45;
   }
 }
 
