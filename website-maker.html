@@ -260,9 +260,77 @@
               <strong>Preview summary</strong>
               <p id="maker-brief">A luxury health website with calm visuals, clear booking actions, services, testimonials, and trust-building content.</p>
             </div>
-            <a class="btn btn-custom" href="price.html#contact">Request This Build</a>
+            <a class="btn btn-outline-brand" href="price.html#contact">View Packages</a>
+            <a class="btn btn-custom" href="#maker-lead-form">Send This Concept</a>
             <div class="maker-palette" id="maker-palette" aria-label="Generated colour palette"></div>
           </div>
+
+          <form id="maker-lead-form" class="maker-lead-form" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="access_key" value="76df574b-73b0-4609-b993-13a22433ed9e">
+            <input type="hidden" name="subject" value="New AI Website Concept Enquiry">
+            <input type="hidden" name="from_name" value="teodor dev tech">
+            <input type="hidden" name="redirect" value="https://www.teodordev.co.za/thank-you.html">
+            <input id="maker-lead-concept" type="hidden" name="ai_concept_summary" value="">
+            <input id="maker-lead-prompt" type="hidden" name="ai_prompt" value="">
+            <input id="maker-lead-style" type="hidden" name="ai_style" value="">
+            <input id="maker-lead-industry" type="hidden" name="ai_industry" value="">
+            <div class="visually-hidden-field" aria-hidden="true">
+              <label for="maker-company-field">Company</label>
+              <input id="maker-company-field" type="text" name="botcheck" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="maker-lead-heading">
+              <span class="eyebrow">Send the concept</span>
+              <h3>Use this preview as your project brief.</h3>
+              <p>Share the essentials and the generated concept will come through with your enquiry.</p>
+            </div>
+
+            <div class="maker-lead-grid">
+              <div class="maker-field">
+                <label for="maker-lead-name">Full name</label>
+                <input id="maker-lead-name" class="form-control" type="text" name="name" autocomplete="name" maxlength="80" required>
+              </div>
+
+              <div class="maker-field">
+                <label for="maker-lead-email">Business email</label>
+                <input id="maker-lead-email" class="form-control" type="email" name="email" autocomplete="email" inputmode="email" maxlength="120" required>
+              </div>
+
+              <div class="maker-field">
+                <label for="maker-lead-phone">WhatsApp or phone</label>
+                <input id="maker-lead-phone" class="form-control" type="tel" name="phone" autocomplete="tel" maxlength="40">
+              </div>
+
+              <div class="maker-field">
+                <label for="maker-lead-budget">Budget range</label>
+                <select id="maker-lead-budget" class="form-control" name="budget_range" required>
+                  <option value="" selected disabled>Select budget range</option>
+                  <option value="Starter budget">Starter budget</option>
+                  <option value="Professional business build">Professional business build</option>
+                  <option value="Larger custom project">Larger custom project</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="maker-field">
+                <label for="maker-lead-timeline">Timeline</label>
+                <select id="maker-lead-timeline" class="form-control" name="timeline" required>
+                  <option value="" selected disabled>Select timeline</option>
+                  <option value="As soon as possible">As soon as possible</option>
+                  <option value="Within 2 to 4 weeks">Within 2 to 4 weeks</option>
+                  <option value="Within 1 to 3 months">Within 1 to 3 months</option>
+                  <option value="Still exploring">Still exploring</option>
+                </select>
+              </div>
+
+              <div class="maker-field maker-lead-notes">
+                <label for="maker-lead-message">Extra notes</label>
+                <textarea id="maker-lead-message" class="form-control" name="message" rows="4" maxlength="1200" placeholder="Add anything specific you want included in the build."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-custom w-100">Send This Concept To Teodor</button>
+          </form>
         </div>
       </div>
     </div>

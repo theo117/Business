@@ -455,6 +455,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderConcept() {
     currentConcept = getConcept();
     const { businessName, industry, style } = currentConcept;
+    const leadConceptInput = document.getElementById('maker-lead-concept');
+    const leadPromptInput = document.getElementById('maker-lead-prompt');
+    const leadStyleInput = document.getElementById('maker-lead-style');
+    const leadIndustryInput = document.getElementById('maker-lead-industry');
 
     preview.classList.remove(
       ...Object.values(styles).map(item => item.className),
@@ -480,6 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
     templateLabel.textContent = `${style.label} ${industry.label} template`;
     briefEl.textContent = currentConcept.brief;
     renderPalette(style.colors);
+
+    if (leadConceptInput) leadConceptInput.value = currentConcept.brief;
+    if (leadPromptInput) leadPromptInput.value = currentConcept.prompt;
+    if (leadStyleInput) leadStyleInput.value = style.label;
+    if (leadIndustryInput) leadIndustryInput.value = industry.label;
   }
 
   form.addEventListener('submit', event => {
