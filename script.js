@@ -215,16 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
 ================================ */
 document.addEventListener('DOMContentLoaded', () => {
   const intro = document.getElementById('maker-intro');
-  const introSeenKey = 'teodor-site-favicon-intro-seen-v1';
 
   if (intro) {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const hasSeenIntro = window.localStorage.getItem(introSeenKey) === 'true';
 
-    if (hasSeenIntro || reduceMotion) {
+    if (reduceMotion) {
       intro.remove();
     } else {
-      window.localStorage.setItem(introSeenKey, 'true');
       intro.classList.add('maker-intro-active');
       window.setTimeout(() => {
         intro.classList.add('maker-intro-hide');

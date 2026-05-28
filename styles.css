@@ -1227,8 +1227,8 @@ textarea:focus-visible,
   position: relative;
   display: grid;
   place-items: center;
-  width: 112px;
-  height: 112px;
+  width: 136px;
+  height: 136px;
   border-radius: 50%;
   color: #fff;
   background: #fff;
@@ -1257,8 +1257,8 @@ textarea:focus-visible,
 .maker-intro-icon img {
   position: relative;
   z-index: 1;
-  width: 76px;
-  height: 76px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
   object-fit: cover;
   animation: makerIntroSpin 2.2s ease-in-out infinite;
