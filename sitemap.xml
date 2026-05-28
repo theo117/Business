@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.teodordev.co.za/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.teodordev.co.za/projects.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.teodordev.co.za/about.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.teodordev.co.za/price.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.teodordev.co.za/website-maker.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

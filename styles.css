@@ -1198,6 +1198,591 @@ textarea:focus-visible,
   padding-top: 0;
 }
 
+.maker-page {
+  padding-top: 0;
+}
+
+.maker-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+  padding-bottom: 72px;
+}
+
+.maker-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(22, 116, 90, 0.16), transparent 28%),
+    radial-gradient(circle at 90% 0, rgba(185, 145, 87, 0.18), transparent 26%);
+  pointer-events: none;
+}
+
+.maker-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.maker-hero-copy h1 {
+  max-width: 800px;
+  margin-bottom: 1rem;
+  color: var(--brand-deep);
+  font-size: clamp(2.45rem, 5vw, 4.6rem);
+  line-height: 1.04;
+}
+
+.maker-hero-copy p {
+  max-width: 690px;
+  margin-bottom: 1.7rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.maker-hero-panel,
+.maker-control-panel,
+.maker-preview-shell,
+.maker-output-panel {
+  border: 1px solid rgba(10, 47, 77, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.maker-hero-panel {
+  padding: 1.35rem;
+  border-radius: 26px;
+}
+
+.maker-hero-panel h2 {
+  margin: 1rem 0 0.45rem;
+  color: var(--brand-deep);
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.maker-hero-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.maker-mini-window {
+  overflow: hidden;
+  border: 1px solid rgba(10, 47, 77, 0.12);
+  border-radius: 18px;
+  background: #f7fafc;
+}
+
+.maker-mini-content {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+}
+
+.maker-mini-content span,
+.maker-mini-content strong,
+.maker-mini-content p,
+.maker-mini-content div {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(12, 79, 130, 0.16), rgba(185, 145, 87, 0.18));
+}
+
+.maker-mini-content span {
+  width: 34%;
+  height: 0.8rem;
+}
+
+.maker-mini-content strong {
+  width: 82%;
+  height: 2.8rem;
+  border-radius: 16px;
+}
+
+.maker-mini-content p {
+  width: 68%;
+  height: 1rem;
+}
+
+.maker-mini-content div {
+  width: 46%;
+  height: 2.4rem;
+}
+
+.maker-workspace-section {
+  padding-top: 68px;
+}
+
+.maker-workspace {
+  display: grid;
+  gap: 1.6rem;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.maker-control-panel {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  border-radius: 24px;
+}
+
+.maker-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.maker-field label {
+  color: var(--brand-deep);
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+}
+
+.maker-field .form-control {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  color: var(--text);
+}
+
+.maker-field textarea {
+  resize: vertical;
+}
+
+.maker-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.maker-prompt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.maker-prompt-chips button,
+.maker-toolbar-actions button {
+  border: 1px solid rgba(10, 47, 77, 0.14);
+  color: var(--brand-deep);
+  background: rgba(255, 255, 255, 0.84);
+  font-weight: 800;
+}
+
+.maker-prompt-chips button {
+  border-radius: 999px;
+  padding: 0.48rem 0.72rem;
+  font-size: 0.85rem;
+}
+
+.maker-prompt-chips button:hover,
+.maker-toolbar-actions button:hover {
+  background: var(--brand-soft);
+}
+
+.maker-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.maker-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.maker-preview-shell {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.maker-preview-hidden {
+  display: none;
+}
+
+.maker-preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(10, 47, 77, 0.09);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.maker-preview-toolbar > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.maker-status-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 5px rgba(22, 116, 90, 0.13);
+}
+
+.maker-toolbar-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  border-radius: 999px;
+  padding: 0.48rem 0.72rem;
+  font-size: 0.86rem;
+}
+
+.maker-toolbar-actions button.copied {
+  color: #fff;
+  background: var(--success);
+}
+
+.generated-site-preview {
+  --generated-primary: #0c4f82;
+  --generated-accent: #11a0d8;
+  --generated-soft: #f5f8fb;
+  --generated-text: #122033;
+  padding: clamp(1rem, 2.2vw, 1.6rem);
+  color: var(--generated-text);
+  background: var(--generated-soft);
+}
+
+.generated-site-preview.theme-luxury {
+  --generated-primary: #172033;
+  --generated-accent: #b99157;
+  --generated-soft: #f7f2ea;
+  --generated-text: #111827;
+}
+
+.generated-site-preview.theme-friendly {
+  --generated-primary: #256c5f;
+  --generated-accent: #f4a261;
+  --generated-soft: #fff7ed;
+  --generated-text: #18332f;
+}
+
+.generated-site-preview.theme-bold {
+  --generated-primary: #111827;
+  --generated-accent: #ef4444;
+  --generated-soft: #fffbea;
+  --generated-text: #111827;
+}
+
+.generated-site-preview.theme-minimal {
+  --generated-primary: #1f2937;
+  --generated-accent: #6b7280;
+  --generated-soft: #f9fafb;
+  --generated-text: #1f2937;
+}
+
+.generated-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.generated-nav strong {
+  margin-right: auto;
+  color: var(--generated-primary);
+  font-family: "Outfit", sans-serif;
+}
+
+.generated-nav span {
+  color: var(--generated-text);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.generated-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: clamp(1rem, 2.2vw, 1.4rem);
+  align-items: stretch;
+  padding: clamp(1rem, 2vw, 1.35rem) 0;
+}
+
+.generated-hero > div:first-child {
+  padding: clamp(1.35rem, 4vw, 2.5rem);
+  border-radius: 22px;
+  background: #fff;
+}
+
+.generated-kicker {
+  color: var(--generated-accent);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.generated-hero h3 {
+  margin: 0.8rem 0 0.8rem;
+  color: var(--generated-primary);
+  font-size: clamp(2.35rem, 5vw, 4.9rem);
+  line-height: 1;
+}
+
+.generated-hero p {
+  margin-bottom: 1.1rem;
+  color: rgba(31, 41, 55, 0.78);
+}
+
+.generated-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.generated-actions a {
+  border-radius: 999px;
+  padding: 0.68rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.generated-actions a:first-child {
+  color: #fff;
+  background: var(--generated-primary);
+}
+
+.generated-actions a:last-child {
+  color: var(--generated-primary);
+  border: 1px solid rgba(31, 41, 55, 0.2);
+  background: #fff;
+}
+
+.generated-visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 1.2rem;
+  border-radius: 22px;
+  color: #fff;
+  background: linear-gradient(140deg, var(--generated-primary), var(--generated-accent));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mock-photo-main {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.24)),
+    var(--mock-image);
+}
+
+.mock-photo-main span {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
+.mock-photo-main span:first-child {
+  top: 13%;
+  right: 12%;
+  width: 38%;
+  height: 18%;
+}
+
+.mock-photo-main span:nth-child(2) {
+  left: 11%;
+  bottom: 22%;
+  width: 46%;
+  height: 12%;
+}
+
+.mock-photo-main span:nth-child(3) {
+  right: 12%;
+  bottom: 14%;
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+}
+
+.generated-visual strong {
+  position: relative;
+  z-index: 1;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.4rem;
+}
+
+.generated-visual p {
+  position: relative;
+  z-index: 1;
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.generated-image-strip {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mock-thumb {
+  min-height: 138px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.12)),
+    var(--mock-thumb-one);
+  box-shadow: 0 16px 36px rgba(9, 26, 44, 0.08);
+}
+
+.mock-thumb-two {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.12)),
+    var(--mock-thumb-two);
+}
+
+.mock-thumb-three {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.12)),
+    var(--mock-thumb-three);
+}
+
+.generated-site-preview.industry-health {
+  --mock-image:
+    radial-gradient(circle at 72% 24%, rgba(255,255,255,0.86) 0 11%, transparent 12%),
+    linear-gradient(135deg, #dceff4 0 34%, #ffffff 34% 52%, #9cc8d1 52% 100%);
+  --mock-thumb-one: linear-gradient(135deg, #eef8fa, #a7ccd4);
+  --mock-thumb-two: linear-gradient(135deg, #ffffff 0 42%, #d4ebf0 42% 100%);
+  --mock-thumb-three: radial-gradient(circle at 68% 36%, #ffffff 0 20%, transparent 21%), linear-gradient(135deg, #b7d9df, #f7fbfc);
+}
+
+.generated-site-preview.industry-restaurant {
+  --mock-image:
+    radial-gradient(circle at 34% 42%, #f8d49a 0 13%, transparent 14%),
+    radial-gradient(circle at 62% 50%, #ef7b45 0 11%, transparent 12%),
+    linear-gradient(135deg, #2d1c18, #9a4f31 58%, #f4b95f);
+  --mock-thumb-one: radial-gradient(circle at 28% 42%, #f6d28d 0 18%, transparent 19%), linear-gradient(135deg, #5b2d21, #c46b3f);
+  --mock-thumb-two: linear-gradient(135deg, #2a1714 0 42%, #e7a451 42% 100%);
+  --mock-thumb-three: radial-gradient(circle at 55% 50%, #f7ce82 0 24%, transparent 25%), linear-gradient(135deg, #7a3429, #231312);
+}
+
+.generated-site-preview.industry-legal {
+  --mock-image:
+    linear-gradient(90deg, rgba(255,255,255,0.5) 0 6%, transparent 6% 12%) 0 0 / 72px 100%,
+    linear-gradient(135deg, #162033, #374151 58%, #c8a968);
+  --mock-thumb-one: linear-gradient(135deg, #111827, #4b5563);
+  --mock-thumb-two: linear-gradient(135deg, #f5f1e8 0 48%, #1f2937 48% 100%);
+  --mock-thumb-three: linear-gradient(135deg, #334155, #d0b36f);
+}
+
+.generated-site-preview.industry-creative {
+  --mock-image:
+    radial-gradient(circle at 28% 32%, #ffffff 0 9%, transparent 10%),
+    linear-gradient(135deg, #191923, #6d28d9 45%, #f97316);
+  --mock-thumb-one: linear-gradient(135deg, #111827, #db2777);
+  --mock-thumb-two: radial-gradient(circle at 38% 44%, #fff 0 15%, transparent 16%), linear-gradient(135deg, #4c1d95, #f97316);
+  --mock-thumb-three: linear-gradient(135deg, #0f172a 0 40%, #eab308 40% 100%);
+}
+
+.generated-site-preview.industry-saas {
+  --mock-image:
+    linear-gradient(90deg, rgba(255,255,255,0.26) 0 1px, transparent 1px 100%) 0 0 / 38px 38px,
+    linear-gradient(180deg, rgba(255,255,255,0.2) 0 1px, transparent 1px 100%) 0 0 / 38px 38px,
+    linear-gradient(135deg, #0f172a, #2563eb 56%, #22c55e);
+  --mock-thumb-one: linear-gradient(135deg, #e0f2fe 0 32%, #2563eb 32% 100%);
+  --mock-thumb-two: linear-gradient(135deg, #111827, #22c55e);
+  --mock-thumb-three: linear-gradient(135deg, #f8fafc 0 44%, #38bdf8 44% 100%);
+}
+
+.generated-site-preview.industry-local-service {
+  --mock-image:
+    linear-gradient(135deg, #d9e5dc 0 24%, #63756b 24% 52%, #f4f0e8 52% 100%);
+  --mock-thumb-one: linear-gradient(135deg, #f5f1e8, #70867b);
+  --mock-thumb-two: linear-gradient(135deg, #24352f 0 40%, #c8d4ca 40% 100%);
+  --mock-thumb-three: linear-gradient(135deg, #dbe7df, #8a9d91);
+}
+
+.generated-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.generated-section-grid section {
+  padding: 1.15rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.generated-section-grid span {
+  color: var(--generated-accent);
+  font-weight: 900;
+}
+
+.generated-section-grid h4 {
+  margin: 0.55rem 0 0.4rem;
+  color: var(--generated-primary);
+  font-size: 1.05rem;
+}
+
+.generated-section-grid p {
+  margin: 0;
+  color: rgba(31, 41, 55, 0.74);
+  font-size: 0.92rem;
+}
+
+.maker-output-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.maker-output-panel .btn {
+  white-space: nowrap;
+}
+
+.maker-output-panel strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--brand-deep);
+  font-family: "Outfit", sans-serif;
+}
+
+.maker-output-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.maker-palette {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.maker-palette span {
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(9, 26, 44, 0.13);
+}
+
 .pricing-compare-panel {
   border-radius: 24px;
   overflow: hidden;
@@ -1315,8 +1900,17 @@ textarea:focus-visible,
 
   .pricing-hero-grid,
   .pricing-plan-grid,
-  .pricing-trust-row {
+  .pricing-trust-row,
+  .maker-hero-grid,
+  .maker-workspace,
+  .generated-hero,
+  .generated-image-strip,
+  .generated-section-grid {
     grid-template-columns: 1fr;
+  }
+
+  .maker-control-panel {
+    position: static;
   }
 
   .pricing-card.featured {
@@ -1369,9 +1963,29 @@ textarea:focus-visible,
   .pricing-plan-card,
   .pricing-card,
   .pricing-compare-panel,
+  .maker-hero-panel,
+  .maker-control-panel,
+  .maker-preview-shell,
   #contact form,
   .contact-copy {
     border-radius: 20px;
+  }
+
+  .maker-field-grid,
+  .maker-output-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .generated-nav span {
+    display: none;
+  }
+
+  .generated-visual {
+    min-height: 240px;
+  }
+
+  .mock-thumb {
+    min-height: 110px;
   }
 
   .compare-row {
