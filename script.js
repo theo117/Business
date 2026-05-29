@@ -87,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const allowedDemoHosts = new Set([
     'covenant-blessed-site.lovable.app',
     'ferrari.teodordev.co.za',
+    'site1.teodordev.co.za',
+    'site2.teodordev.co.za',
+    'site3.teodordev.co.za',
+    'site4.teodordev.co.za',
     'wedding.teodordev.co.za',
     'wp3.theodorenelson.co.za',
     'wp4.theodorenelson.co.za',
