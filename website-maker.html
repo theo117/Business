@@ -313,6 +313,28 @@
             <div class="maker-palette" id="maker-palette" aria-label="Generated colour palette"></div>
           </div>
 
+          <div class="maker-strategy-panel">
+            <section>
+              <span class="maker-strategy-label">Recommended pages</span>
+              <div class="maker-page-list">
+                <span data-maker="pageOne">Home</span>
+                <span data-maker="pageTwo">Services</span>
+                <span data-maker="pageThree">Reviews</span>
+                <span data-maker="pageFour">Contact</span>
+              </div>
+            </section>
+            <section>
+              <span class="maker-strategy-label">Lead capture plan</span>
+              <h3 data-maker="leadPlanTitle">Turn service interest into consultation requests.</h3>
+              <p data-maker="leadPlanText">Use the hero CTA, proof section, short contact form, and follow-up questions to qualify serious enquiries.</p>
+            </section>
+            <section>
+              <span class="maker-strategy-label">Build priority</span>
+              <h3 data-maker="priorityTitle">Launch the trust-building pages first.</h3>
+              <p data-maker="priorityText">Start with the homepage, core services, proof, and contact flow before adding deeper content.</p>
+            </section>
+          </div>
+
           <form id="maker-lead-form" class="maker-lead-form" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8">
             <input type="hidden" name="access_key" value="76df574b-73b0-4609-b993-13a22433ed9e">
             <input type="hidden" name="subject" value="New AI Website Concept Enquiry">
@@ -322,6 +344,8 @@
             <input id="maker-lead-prompt" type="hidden" name="ai_prompt" value="">
             <input id="maker-lead-style" type="hidden" name="ai_style" value="">
             <input id="maker-lead-industry" type="hidden" name="ai_industry" value="">
+            <input id="maker-lead-pages" type="hidden" name="recommended_pages" value="">
+            <input id="maker-lead-strategy" type="hidden" name="lead_capture_strategy" value="">
             <div class="visually-hidden-field" aria-hidden="true">
               <label for="maker-company-field">Company</label>
               <input id="maker-company-field" type="text" name="botcheck" tabindex="-1" autocomplete="off">

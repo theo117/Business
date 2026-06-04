@@ -2122,6 +2122,63 @@ textarea:focus-visible,
   box-shadow: 0 8px 18px rgba(9, 26, 44, 0.13);
 }
 
+.maker-strategy-panel {
+  display: grid;
+  grid-template-columns: 0.72fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0 1rem 1rem;
+}
+
+.maker-strategy-panel section {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(10, 47, 77, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 34px rgba(9, 26, 44, 0.06);
+}
+
+.maker-strategy-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--brand);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.maker-strategy-panel h3 {
+  margin: 0 0 0.45rem;
+  color: var(--brand-deep);
+  font-size: 1.08rem;
+}
+
+.maker-strategy-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.maker-page-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.maker-page-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.42rem 0.6rem;
+  border: 1px solid rgba(10, 47, 77, 0.1);
+  border-radius: 999px;
+  color: var(--brand-deep);
+  background: var(--brand-soft);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
 .maker-lead-form {
   display: grid;
   gap: 1rem;
@@ -2338,6 +2395,7 @@ textarea:focus-visible,
   .maker-hero-grid,
   .maker-workspace,
   .maker-output-panel,
+  .maker-strategy-panel,
   .generated-hero,
   .generated-image-strip,
   .generated-section-grid,
@@ -2410,6 +2468,7 @@ textarea:focus-visible,
 
   .maker-field-grid,
   .maker-output-panel,
+  .maker-strategy-panel,
   .maker-lead-grid {
     grid-template-columns: 1fr;
   }

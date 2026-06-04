@@ -284,7 +284,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"I knew exactly what they did, where they worked, and how to ask for a quote."', 'Local homeowner reaction'],
       contactTitle: 'Turn local visitors into quote requests.',
       contactText: 'Capture the job type, area, urgency, contact details, and budget cues without making the form feel heavy.',
-      contactCta: 'Send Quote Brief'
+      contactCta: 'Send Quote Brief',
+      pages: ['Home', 'Services', 'Areas', 'Quote'],
+      leadPlan: ['Turn urgent service needs into quote requests.', 'Use service-area proof, recent work, response expectations, and a short job-detail form to qualify local leads.'],
+      priority: ['Launch the quote path first.', 'Start with homepage, services, proof, and contact flow, then add project galleries and location pages.']
     },
     restaurant: {
       label: 'Restaurant',
@@ -318,7 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"The photos and menu made it feel like the right place before we booked."', 'First-time guest reaction'],
       contactTitle: 'Move visitors from craving to reservation.',
       contactText: 'Collect booking details, event enquiries, and menu interest while the visual experience is still fresh.',
-      contactCta: 'Send Restaurant Concept'
+      contactCta: 'Send Restaurant Concept',
+      pages: ['Home', 'Menu', 'Bookings', 'Events'],
+      leadPlan: ['Turn appetite into reservations and event enquiries.', 'Keep menu highlights, atmosphere, hours, location, and booking actions visible before visitors drift away.'],
+      priority: ['Launch the booking journey first.', 'Start with menu highlights, reservation flow, location, and private-event enquiry before deeper chef or gallery content.']
     },
     health: {
       label: 'Health and wellness',
@@ -352,7 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"The website made the clinic feel calm, credible, and easy to contact."', 'Ideal patient reaction'],
       contactTitle: 'Make the first appointment feel simple.',
       contactText: 'Capture the service needed, preferred date, contact details, and any concerns before the consultation.',
-      contactCta: 'Send Health Concept'
+      contactCta: 'Send Health Concept',
+      pages: ['Home', 'Treatments', 'Reviews', 'Booking'],
+      leadPlan: ['Turn service interest into consultation requests.', 'Use the hero CTA, treatment pathways, review proof, and a short booking form to qualify serious enquiries.'],
+      priority: ['Launch the trust-building pages first.', 'Start with the homepage, core treatments, proof, and contact flow before adding deeper education content.']
     },
     legal: {
       label: 'Legal and finance',
@@ -386,7 +395,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"It felt serious, clear, and gave me confidence to book a consultation."', 'Qualified client reaction'],
       contactTitle: 'Route the right clients into consultation.',
       contactText: 'Collect matter type, urgency, contact preference, and context without giving legal advice on the page.',
-      contactCta: 'Send Advisory Concept'
+      contactCta: 'Send Advisory Concept',
+      pages: ['Home', 'Expertise', 'Process', 'Consult'],
+      leadPlan: ['Turn uncertainty into qualified consultation requests.', 'Use practice-area routing, authority signals, confidentiality language, and matter-type fields to filter serious leads.'],
+      priority: ['Launch the credibility path first.', 'Start with practice areas, consultation expectations, credentials, and the contact route before adding detailed resources.']
     },
     creative: {
       label: 'Portfolio',
@@ -420,7 +432,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"The portfolio felt premium, but the enquiry process was still clear."', 'Creative buyer reaction'],
       contactTitle: 'Turn attention into a serious project brief.',
       contactText: 'Capture style, budget, date, project type, and references so the first conversation is productive.',
-      contactCta: 'Send Portfolio Concept'
+      contactCta: 'Send Portfolio Concept',
+      pages: ['Home', 'Work', 'Packages', 'Brief'],
+      leadPlan: ['Turn visual interest into project briefs.', 'Use selected case studies, package cues, process notes, and a short brief form to separate browsers from buyers.'],
+      priority: ['Launch the strongest work first.', 'Start with a curated homepage, featured work, service packages, and enquiry brief before adding a full archive.']
     },
     saas: {
       label: 'SaaS or app',
@@ -454,7 +469,10 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonial: ['"I understood the workflow before I even opened the product."', 'Product buyer reaction'],
       contactTitle: 'Convert interest into trials and demos.',
       contactText: 'Route visitors to a trial, demo request, or pricing conversation depending on company fit.',
-      contactCta: 'Send SaaS Concept'
+      contactCta: 'Send SaaS Concept',
+      pages: ['Home', 'Features', 'Pricing', 'Demo'],
+      leadPlan: ['Turn product curiosity into trials and demos.', 'Use benefit-led messaging, workflow previews, pricing cues, and a demo route for higher-intent visitors.'],
+      priority: ['Launch the product story first.', 'Start with homepage, feature workflow, pricing path, and demo/trial conversion before adding integrations and docs.']
     }
   };
 
@@ -541,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setMakerText(name, value) {
-    const target = preview.querySelector(`[data-maker="${name}"]`);
+    const target = preview.querySelector(`[data-maker="${name}"]`) || document.querySelector(`[data-maker="${name}"]`);
     if (target) target.textContent = value;
   }
 
@@ -562,6 +580,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const leadPromptInput = document.getElementById('maker-lead-prompt');
     const leadStyleInput = document.getElementById('maker-lead-style');
     const leadIndustryInput = document.getElementById('maker-lead-industry');
+    const leadPagesInput = document.getElementById('maker-lead-pages');
+    const leadStrategyInput = document.getElementById('maker-lead-strategy');
 
     preview.classList.remove(
       ...Object.values(styles).map(item => item.className),
@@ -604,15 +624,25 @@ document.addEventListener('DOMContentLoaded', () => {
     setMakerText('contactTitle', industry.contactTitle);
     setMakerText('contactText', industry.contactText);
     setMakerText('contactCta', industry.contactCta);
+    setMakerText('pageOne', industry.pages[0]);
+    setMakerText('pageTwo', industry.pages[1]);
+    setMakerText('pageThree', industry.pages[2]);
+    setMakerText('pageFour', industry.pages[3]);
+    setMakerText('leadPlanTitle', industry.leadPlan[0]);
+    setMakerText('leadPlanText', industry.leadPlan[1]);
+    setMakerText('priorityTitle', industry.priority[0]);
+    setMakerText('priorityText', industry.priority[1]);
 
     templateLabel.textContent = `${style.label} ${industry.label} template`;
-    briefEl.textContent = currentConcept.brief;
+    briefEl.textContent = `${currentConcept.brief} Recommended pages: ${industry.pages.join(', ')}.`;
     renderPalette(style.colors);
 
     if (leadConceptInput) leadConceptInput.value = currentConcept.brief;
     if (leadPromptInput) leadPromptInput.value = currentConcept.prompt;
     if (leadStyleInput) leadStyleInput.value = style.label;
     if (leadIndustryInput) leadIndustryInput.value = industry.label;
+    if (leadPagesInput) leadPagesInput.value = industry.pages.join(', ');
+    if (leadStrategyInput) leadStrategyInput.value = `${industry.leadPlan[0]} ${industry.leadPlan[1]} ${industry.priority[0]} ${industry.priority[1]}`;
   }
 
   form.addEventListener('submit', event => {
@@ -630,6 +660,11 @@ document.addEventListener('DOMContentLoaded', () => {
       renderConcept();
       previewShell.classList.remove('maker-preview-hidden');
     });
+  });
+
+  [businessInput, promptInput, industryInput, styleInput].forEach(input => {
+    input.addEventListener('input', renderConcept);
+    input.addEventListener('change', renderConcept);
   });
 
   randomizeButton?.addEventListener('click', () => {
