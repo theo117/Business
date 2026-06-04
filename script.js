@@ -261,13 +261,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A practical website concept built around clear offers, fast enquiries, local credibility, and confident next steps.',
       primaryCta: 'Request A Quote',
       secondaryCta: 'View Services',
+      navCta: 'Get Quote',
       visualLabel: 'Quote Flow',
       visualText: 'Service areas, trust badges, proof, and a direct enquiry path.',
+      proof: [
+        ['24h', 'quote target'],
+        ['Local', 'service areas'],
+        ['5+', 'trust signals']
+      ],
+      floating: [
+        ['New quote request', 'Service fit checked'],
+        ['Local proof', 'Recent job photos']
+      ],
       sections: [
         ['Service packages', 'Organize core services so visitors can quickly match their problem to the right solution.'],
         ['Local proof', 'Use reviews, completed work, service areas, and response-time promises to build confidence.'],
         ['Quote pathway', 'Make the enquiry form simple, visible, and focused on qualified leads.']
-      ]
+      ],
+      offerTitle: 'Show the service, proof, and quote path on one screen.',
+      offerText: 'A practical lead section with service cards, service-area notes, recent work, and an enquiry form that filters serious requests.',
+      offerPoints: ['Before-and-after proof', 'Service area clarity', 'Fast quote request'],
+      testimonial: ['"I knew exactly what they did, where they worked, and how to ask for a quote."', 'Local homeowner reaction'],
+      contactTitle: 'Turn local visitors into quote requests.',
+      contactText: 'Capture the job type, area, urgency, contact details, and budget cues without making the form feel heavy.',
+      contactCta: 'Send Quote Brief'
     },
     restaurant: {
       label: 'Restaurant',
@@ -278,13 +295,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A restaurant concept with menu highlights, atmosphere, booking actions, event prompts, and story-led brand detail.',
       primaryCta: 'Book A Table',
       secondaryCta: 'Explore Menu',
+      navCta: 'Reserve',
       visualLabel: 'Featured Menu',
       visualText: 'Signature dishes, booking prompts, gallery moments, and guest reviews.',
+      proof: [
+        ['Tonight', 'booking focus'],
+        ['4.8', 'guest rating'],
+        ['Menu', 'highlights']
+      ],
+      floating: [
+        ['Table request', 'Dinner for 4'],
+        ['Guest proof', 'Loved by locals']
+      ],
       sections: [
         ['Menu highlights', 'Show signature dishes, seasonal specials, and clear reasons to visit.'],
         ['Atmosphere', 'Use visual storytelling to communicate the dining experience before guests arrive.'],
         ['Reservations', 'Keep booking, hours, location, and contact details close to every decision point.']
-      ]
+      ],
+      offerTitle: 'Make guests hungry, confident, and ready to reserve.',
+      offerText: 'A restaurant section with signature dishes, opening hours, private-event prompts, and a booking flow close to the food imagery.',
+      offerPoints: ['Signature dish cards', 'Hours and location', 'Private event enquiry'],
+      testimonial: ['"The photos and menu made it feel like the right place before we booked."', 'First-time guest reaction'],
+      contactTitle: 'Move visitors from craving to reservation.',
+      contactText: 'Collect booking details, event enquiries, and menu interest while the visual experience is still fresh.',
+      contactCta: 'Send Restaurant Concept'
     },
     health: {
       label: 'Health and wellness',
@@ -295,13 +329,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A polished website concept for a care provider that needs stronger bookings, clearer services, and a reassuring first impression.',
       primaryCta: 'Book A Consultation',
       secondaryCta: 'View Services',
+      navCta: 'Book Now',
       visualLabel: 'Care Plan',
       visualText: 'Trust signals, service pathways, and a simple booking flow.',
+      proof: [
+        ['4.9', 'review score'],
+        ['24h', 'reply target'],
+        ['3', 'clear next steps']
+      ],
+      floating: [
+        ['New client enquiry', 'Ready to book'],
+        ['Trust signal', 'Verified reviews']
+      ],
       sections: [
         ['Signature services', 'Present key treatments, sessions, or packages with calm explanations and clear outcomes.'],
         ['Proof and confidence', 'Use credentials, patient guidance, reviews, and process notes to reduce uncertainty.'],
         ['Booking journey', 'Guide visitors toward a consultation with minimal friction.']
-      ]
+      ],
+      offerTitle: 'Everything a patient needs before booking.',
+      offerText: 'A focused service block with outcomes, pricing cues, process notes, and answers to common decision questions.',
+      offerPoints: ['Clear service pathways', 'Review-led trust section', 'Short booking form'],
+      testimonial: ['"The website made the clinic feel calm, credible, and easy to contact."', 'Ideal patient reaction'],
+      contactTitle: 'Make the first appointment feel simple.',
+      contactText: 'Capture the service needed, preferred date, contact details, and any concerns before the consultation.',
+      contactCta: 'Send Health Concept'
     },
     legal: {
       label: 'Legal and finance',
@@ -312,13 +363,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A structured concept with practice areas, proof, consultation prompts, and a composed professional tone.',
       primaryCta: 'Schedule A Consultation',
       secondaryCta: 'View Expertise',
+      navCta: 'Consult',
       visualLabel: 'Case Intake',
       visualText: 'Practice areas, client fit, credentials, and consultation routing.',
+      proof: [
+        ['15+', 'years framed'],
+        ['Clear', 'case intake'],
+        ['Private', 'consultation']
+      ],
+      floating: [
+        ['Consultation request', 'Matter type selected'],
+        ['Authority signal', 'Credentials visible']
+      ],
       sections: [
         ['Practice areas', 'Separate services by client need so visitors understand the right path quickly.'],
         ['Authority signals', 'Highlight qualifications, experience, process, and client outcomes with restraint.'],
         ['Consultation flow', 'Invite qualified enquiries with a clear first-step form and expectation setting.']
-      ]
+      ],
+      offerTitle: 'Help serious clients understand the right next step.',
+      offerText: 'A professional intake section with practice areas, qualification cues, confidentiality reassurance, and a consultation request.',
+      offerPoints: ['Practice-area routing', 'Credential highlights', 'Confidential enquiry flow'],
+      testimonial: ['"It felt serious, clear, and gave me confidence to book a consultation."', 'Qualified client reaction'],
+      contactTitle: 'Route the right clients into consultation.',
+      contactText: 'Collect matter type, urgency, contact preference, and context without giving legal advice on the page.',
+      contactCta: 'Send Advisory Concept'
     },
     creative: {
       label: 'Portfolio',
@@ -329,13 +397,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A visual-first concept with selected work, services, process, packages, and a refined contact path.',
       primaryCta: 'Start A Project',
       secondaryCta: 'View Work',
+      navCta: 'Enquire',
       visualLabel: 'Selected Work',
       visualText: 'Project stories, image-led sections, service detail, and enquiry prompts.',
+      proof: [
+        ['12', 'featured works'],
+        ['3', 'package paths'],
+        ['Brief', 'ready form']
+      ],
+      floating: [
+        ['Project enquiry', 'Style direction saved'],
+        ['Portfolio proof', 'Featured case study']
+      ],
       sections: [
         ['Featured work', 'Lead with strongest projects and short context that explains the value behind the visuals.'],
         ['Services', 'Make offers easy to understand without flattening the creative personality.'],
         ['Project enquiry', 'Guide visitors into a brief with budget, style, timeline, and goals.']
-      ]
+      ],
+      offerTitle: 'Let the work sell, then make the enquiry easy.',
+      offerText: 'An editorial project section with image-led case studies, service options, process notes, and a brief that captures intent.',
+      offerPoints: ['Case-study gallery', 'Package comparison', 'Project brief form'],
+      testimonial: ['"The portfolio felt premium, but the enquiry process was still clear."', 'Creative buyer reaction'],
+      contactTitle: 'Turn attention into a serious project brief.',
+      contactText: 'Capture style, budget, date, project type, and references so the first conversation is productive.',
+      contactCta: 'Send Portfolio Concept'
     },
     saas: {
       label: 'SaaS or app',
@@ -346,13 +431,30 @@ document.addEventListener('DOMContentLoaded', () => {
       subheadline: 'A SaaS concept with benefit-led messaging, feature blocks, workflow examples, pricing, and product calls to action.',
       primaryCta: 'Start Free',
       secondaryCta: 'See Features',
+      navCta: 'Start Free',
       visualLabel: 'Product Flow',
       visualText: 'Dashboard preview, feature pathways, integrations, and pricing prompts.',
+      proof: [
+        ['14d', 'trial path'],
+        ['3', 'core workflows'],
+        ['Demo', 'CTA ready']
+      ],
+      floating: [
+        ['Signup intent', 'Trial started'],
+        ['Product proof', 'Workflow preview']
+      ],
       sections: [
         ['Core benefits', 'Explain the business outcome before listing features.'],
         ['Product workflow', 'Show how users move from problem to result inside the product.'],
         ['Pricing path', 'Make trial, demo, and paid plan options easy to compare.']
-      ]
+      ],
+      offerTitle: 'Show the product before asking for the signup.',
+      offerText: 'A product-led section with workflow screenshots, benefit cards, integrations, pricing cues, and a demo/trial split.',
+      offerPoints: ['Dashboard preview', 'Feature-to-benefit cards', 'Trial and demo paths'],
+      testimonial: ['"I understood the workflow before I even opened the product."', 'Product buyer reaction'],
+      contactTitle: 'Convert interest into trials and demos.',
+      contactText: 'Route visitors to a trial, demo request, or pricing conversation depending on company fit.',
+      contactCta: 'Send SaaS Concept'
     }
   };
 
@@ -473,14 +575,35 @@ document.addEventListener('DOMContentLoaded', () => {
     setMakerText('subheadline', industry.subheadline);
     setMakerText('primaryCta', industry.primaryCta);
     setMakerText('secondaryCta', industry.secondaryCta);
+    setMakerText('navCta', industry.navCta);
     setMakerText('visualLabel', industry.visualLabel);
     setMakerText('visualText', industry.visualText);
+    setMakerText('proofOneValue', industry.proof[0][0]);
+    setMakerText('proofOneLabel', industry.proof[0][1]);
+    setMakerText('proofTwoValue', industry.proof[1][0]);
+    setMakerText('proofTwoLabel', industry.proof[1][1]);
+    setMakerText('proofThreeValue', industry.proof[2][0]);
+    setMakerText('proofThreeLabel', industry.proof[2][1]);
+    setMakerText('floatingOne', industry.floating[0][0]);
+    setMakerText('floatingOneValue', industry.floating[0][1]);
+    setMakerText('floatingTwo', industry.floating[1][0]);
+    setMakerText('floatingTwoValue', industry.floating[1][1]);
     setMakerText('sectionOneTitle', industry.sections[0][0]);
     setMakerText('sectionOneText', industry.sections[0][1]);
     setMakerText('sectionTwoTitle', industry.sections[1][0]);
     setMakerText('sectionTwoText', industry.sections[1][1]);
     setMakerText('sectionThreeTitle', industry.sections[2][0]);
     setMakerText('sectionThreeText', industry.sections[2][1]);
+    setMakerText('offerTitle', industry.offerTitle);
+    setMakerText('offerText', industry.offerText);
+    setMakerText('offerPointOne', industry.offerPoints[0]);
+    setMakerText('offerPointTwo', industry.offerPoints[1]);
+    setMakerText('offerPointThree', industry.offerPoints[2]);
+    setMakerText('testimonialText', industry.testimonial[0]);
+    setMakerText('testimonialName', industry.testimonial[1]);
+    setMakerText('contactTitle', industry.contactTitle);
+    setMakerText('contactText', industry.contactText);
+    setMakerText('contactCta', industry.contactCta);
 
     templateLabel.textContent = `${style.label} ${industry.label} template`;
     briefEl.textContent = currentConcept.brief;
@@ -504,7 +627,8 @@ document.addEventListener('DOMContentLoaded', () => {
       promptInput.value = button.dataset.prompt || '';
       industryInput.value = 'auto';
       styleInput.value = 'auto';
-      previewShell.classList.add('maker-preview-hidden');
+      renderConcept();
+      previewShell.classList.remove('maker-preview-hidden');
     });
   });
 
@@ -513,7 +637,8 @@ document.addEventListener('DOMContentLoaded', () => {
     promptInput.value = nextPrompt;
     industryInput.value = 'auto';
     styleInput.value = 'auto';
-    previewShell.classList.add('maker-preview-hidden');
+    renderConcept();
+    previewShell.classList.remove('maker-preview-hidden');
     promptInput.focus();
   });
 
@@ -529,4 +654,7 @@ document.addEventListener('DOMContentLoaded', () => {
       briefEl.textContent = text;
     }
   });
+
+  renderConcept();
+  previewShell.classList.remove('maker-preview-hidden');
 });
