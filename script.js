@@ -85,18 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modal = new bootstrap.Modal(modalEl);
   const allowedDemoHosts = new Set([
-    'covenant-blessed-site.lovable.app',
+    'fintechadv.teodordev.co.za',
     'ferrari.teodordev.co.za',
-    'site1.teodordev.co.za',
-    'site2.teodordev.co.za',
-    'site3.teodordev.co.za',
-    'site4.teodordev.co.za',
-    'wedding.teodordev.co.za',
-    'wp3.theodorenelson.co.za',
-    'wp4.theodorenelson.co.za',
-    'wp5.theodorenelson.co.za',
-    'wp6.theodorenelson.co.za',
-    'wp8.theodorenelson.co.za'
+    'wedding.teodordev.co.za'
   ]);
 
   function getSafeDemoUrl(rawUrl) {
