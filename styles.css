@@ -2527,3 +2527,116 @@ textarea:focus-visible,
     scroll-behavior: auto !important;
   }
 }
+/* Cookie consent */
+.cookie-banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  max-width: 920px;
+  margin-inline: auto;
+  padding: 1.15rem;
+  color: #eef8ff;
+  background: rgba(5, 18, 32, 0.98);
+  border: 1px solid rgba(5, 198, 252, 0.42);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cookie-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.cookie-banner__copy h2 {
+  margin: 0 0 0.35rem;
+  color: #fff;
+  font-size: 1.08rem;
+}
+
+.cookie-banner__copy p {
+  max-width: 590px;
+  margin: 0;
+  color: #bdd0df;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.65rem;
+}
+
+.cookie-button,
+.cookie-settings-button {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cookie-button {
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-size: 0.84rem;
+}
+
+.cookie-button--primary {
+  color: #03131f;
+  background: #05c6fc;
+}
+
+.cookie-button--secondary {
+  color: #eef8ff;
+  background: transparent;
+  border: 1px solid rgba(238, 248, 255, 0.38);
+}
+
+.cookie-button:focus-visible,
+.cookie-settings-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.cookie-settings-button {
+  position: fixed;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  z-index: 1090;
+  padding: 0.5rem 0.75rem;
+  color: #d9ebf7;
+  background: rgba(5, 18, 32, 0.94);
+  border: 1px solid rgba(5, 198, 252, 0.35);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 720px) {
+  .cookie-banner__content,
+  .cookie-banner__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+  }
+}

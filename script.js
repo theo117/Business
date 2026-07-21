@@ -1,4 +1,96 @@
 /* ===============================
+   COOKIE CONSENT
+================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const consentKey = 'teodor-cookie-consent';
+  const chatbotSrc = 'https://www.noupe.com/embed/019e92f1de137d4bb951d9c091263d33ae72.js';
+
+  function loadOptionalServices() {
+    if (document.querySelector(`script[src="${chatbotSrc}"]`)) return;
+
+    const chatbotScript = document.createElement('script');
+    chatbotScript.src = chatbotSrc;
+    chatbotScript.async = true;
+    document.body.appendChild(chatbotScript);
+  }
+
+  function getConsent() {
+    try {
+      return window.localStorage.getItem(consentKey);
+    } catch {
+      return null;
+    }
+  }
+
+  function saveConsent(value) {
+    try {
+      window.localStorage.setItem(consentKey, value);
+    } catch {
+      // The choice still applies for this page if storage is unavailable.
+    }
+  }
+
+  const banner = document.createElement('section');
+  banner.className = 'cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-modal', 'true');
+  banner.setAttribute('aria-label', 'Cookie consent');
+  banner.hidden = true;
+  banner.innerHTML = `
+    <div class="cookie-banner__content">
+      <div class="cookie-banner__copy">
+        <h2>Your privacy choices</h2>
+        <p>We use essential browser storage to remember your choice. With your permission, we also load our third-party chat service, which may use cookies.</p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-button cookie-button--secondary" type="button" data-cookie-choice="essential">Essential only</button>
+        <button class="cookie-button cookie-button--primary" type="button" data-cookie-choice="accepted">Accept optional cookies</button>
+      </div>
+    </div>`;
+
+  const settingsButton = document.createElement('button');
+  settingsButton.className = 'cookie-settings-button';
+  settingsButton.type = 'button';
+  settingsButton.textContent = 'Cookie settings';
+  settingsButton.setAttribute('aria-label', 'Change cookie settings');
+
+  function openBanner() {
+    banner.hidden = false;
+    settingsButton.hidden = true;
+    window.requestAnimationFrame(() => banner.classList.add('cookie-banner--visible'));
+  }
+
+  function closeBanner() {
+    banner.classList.remove('cookie-banner--visible');
+    window.setTimeout(() => {
+      banner.hidden = true;
+      settingsButton.hidden = false;
+    }, 220);
+  }
+
+  banner.addEventListener('click', event => {
+    const choiceButton = event.target.closest('[data-cookie-choice]');
+    if (!choiceButton) return;
+
+    const choice = choiceButton.dataset.cookieChoice;
+    saveConsent(choice);
+    if (choice === 'accepted') loadOptionalServices();
+    closeBanner();
+  });
+
+  settingsButton.addEventListener('click', openBanner);
+  document.body.append(banner, settingsButton);
+
+  const consent = getConsent();
+  if (consent === 'accepted') loadOptionalServices();
+  if (consent) {
+    settingsButton.hidden = false;
+  } else {
+    openBanner();
+  }
+});
+
+/* ===============================
    NAVBAR DOTS (SAFE)
 ================================ */
 document.addEventListener('DOMContentLoaded', () => {
